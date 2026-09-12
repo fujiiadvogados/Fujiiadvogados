@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { AREAS } from "@/lib/areas";
 
 const BASE_URL = "https://fujiiadvogados.com.br";
 
@@ -15,9 +16,15 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
+          { path: "/areas", changefreq: "weekly", priority: "0.9" },
           { path: "/quem-somos", changefreq: "monthly", priority: "0.8" },
           { path: "/etica", changefreq: "monthly", priority: "0.7" },
           { path: "/blog", changefreq: "weekly", priority: "0.7" },
+          ...AREAS.map((area) => ({
+            path: `/areas/${area.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.8",
+          })),
         ];
 
         const urls = entries.map((e) =>
