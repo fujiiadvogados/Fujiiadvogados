@@ -1,6 +1,10 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+  # Redirecionamentos 301 das áreas antigas para as 6 novas
+  RewriteRule ^areas/(execucoes-fiscais)/?$ /areas/tributario [R=301,L]
+  RewriteRule ^areas/(credito-rural|endividamento-rural)/?$ /areas/agronegocio [R=301,L]
+  RewriteRule ^areas/(direito-medico|companhias-aereas|concessionarias)/?$ /areas/consumidor [R=301,L]
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

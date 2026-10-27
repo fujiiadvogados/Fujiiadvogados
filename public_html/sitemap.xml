@@ -31,32 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fujiiadvogados.com.br/areas/execucoes-fiscais</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fujiiadvogados.com.br/areas/trabalhista</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://fujiiadvogados.com.br/areas/agronegocio</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fujiiadvogados.com.br/areas/credito-rural</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fujiiadvogados.com.br/areas/endividamento-rural</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fujiiadvogados.com.br/areas/previdenciario</loc>
+    <loc>https://fujiiadvogados.com.br/areas/civil</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -66,17 +46,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fujiiadvogados.com.br/areas/direito-medico</loc>
+    <loc>https://fujiiadvogados.com.br/areas/previdenciario</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fujiiadvogados.com.br/areas/companhias-aereas</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fujiiadvogados.com.br/areas/concessionarias</loc>
+    <loc>https://fujiiadvogados.com.br/areas/trabalhista</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
