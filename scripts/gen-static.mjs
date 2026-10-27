@@ -17,10 +17,8 @@ if (existsSync(publicDir)) {
 }
 
 const routes = ['/', '/areas', '/quem-somos', '/etica', '/blog',
-  '/areas/tributario','/areas/execucoes-fiscais','/areas/trabalhista',
-  '/areas/agronegocio','/areas/credito-rural','/areas/endividamento-rural',
-  '/areas/previdenciario','/areas/consumidor','/areas/direito-medico',
-  '/areas/companhias-aereas','/areas/concessionarias','/sitemap.xml'];
+  '/areas/tributario','/areas/agronegocio','/areas/civil',
+  '/areas/consumidor','/areas/previdenciario','/areas/trabalhista','/sitemap.xml'];
 let fail = 0;
 for (const r of routes) {
   try {

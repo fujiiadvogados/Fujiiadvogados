@@ -71,47 +71,47 @@
 
 :root {
   --radius: 0.5rem;
-  /* Off-white canvas, forest-green authority, restrained copper accent */
+  /* Marfim (do logotipo), azul-marinho de autoridade e dourado envelhecido */
   --background: oklch(0.985 0.008 87);
-  --foreground: oklch(0.25 0.012 70);
+  --foreground: oklch(0.25 0.04 255);
   --card: oklch(0.995 0.004 88);
   --card-foreground: oklch(0.25 0.012 70);
   --popover: oklch(0.995 0.004 88);
   --popover-foreground: oklch(0.25 0.012 70);
-  --primary: oklch(0.27 0.052 153);
+  --primary: oklch(0.26 0.065 255);
   --primary-foreground: oklch(0.985 0.008 87);
   --secondary: oklch(0.955 0.014 88);
-  --secondary-foreground: oklch(0.3 0.052 153);
+  --secondary-foreground: oklch(0.3 0.065 255);
   --muted: oklch(0.955 0.012 88);
-  --muted-foreground: oklch(0.47 0.018 75);
-  --accent: oklch(0.58 0.105 43);
+  --muted-foreground: oklch(0.46 0.03 255);
+  --accent: oklch(0.7 0.12 82);
   --accent-foreground: oklch(0.985 0.008 87);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.88 0.018 82);
   --input: oklch(0.88 0.018 82);
-  --ring: oklch(0.58 0.105 43);
-  --gold: oklch(0.58 0.105 43);
-  --gold-soft: oklch(0.9 0.035 55);
-  --gold-ink: oklch(0.52 0.105 43);
+  --ring: oklch(0.7 0.12 82);
+  --gold: oklch(0.7 0.12 82);
+  --gold-soft: oklch(0.93 0.05 88);
+  --gold-ink: oklch(0.48 0.1 75);
   --whatsapp: oklch(0.62 0.16 150);
   --gradient-gold: linear-gradient(
     100deg,
-    oklch(0.46 0.08 40),
-    oklch(0.68 0.1 52),
-    oklch(0.52 0.105 43)
+    oklch(0.52 0.1 72),
+    oklch(0.8 0.13 86),
+    oklch(0.48 0.1 75)
   );
   --gradient-veil: linear-gradient(180deg, oklch(0.99 0.005 88), oklch(0.95 0.014 92));
   --gradient-halo: radial-gradient(
     ellipse 70% 55% at 50% 0%,
-    oklch(0.9 0.035 55 / 0.48),
+    oklch(0.93 0.05 88 / 0.55),
     transparent 70%
   );
-  --gradient-image-veil: linear-gradient(180deg, transparent 45%, oklch(0.27 0.052 153 / 0.24));
+  --gradient-image-veil: linear-gradient(180deg, transparent 45%, oklch(0.26 0.065 255 / 0.24));
   --shadow-soft:
-    0 1px 2px oklch(0.27 0.052 153 / 0.04), 0 18px 45px -22px oklch(0.27 0.052 153 / 0.18);
+    0 1px 2px oklch(0.26 0.065 255 / 0.04), 0 18px 45px -22px oklch(0.26 0.065 255 / 0.18);
   --shadow-lift:
-    0 2px 4px oklch(0.27 0.052 153 / 0.05), 0 30px 60px -28px oklch(0.27 0.052 153 / 0.24);
+    0 2px 4px oklch(0.26 0.065 255 / 0.05), 0 30px 60px -28px oklch(0.26 0.065 255 / 0.24);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Karla", system-ui, sans-serif;
   --chart-1: oklch(0.646 0.222 41.116);
@@ -130,28 +130,28 @@
 }
 
 .dark {
-  --background: oklch(0.2 0.03 153);
+  --background: oklch(0.2 0.03 255);
   --foreground: oklch(0.96 0.01 87);
-  --card: oklch(0.24 0.035 153);
+  --card: oklch(0.24 0.035 255);
   --card-foreground: oklch(0.96 0.01 87);
-  --popover: oklch(0.24 0.035 153);
+  --popover: oklch(0.24 0.035 255);
   --popover-foreground: oklch(0.96 0.01 87);
   --primary: oklch(0.9 0.025 87);
-  --primary-foreground: oklch(0.22 0.04 153);
-  --secondary: oklch(0.3 0.035 153);
+  --primary-foreground: oklch(0.22 0.04 255);
+  --secondary: oklch(0.3 0.035 255);
   --secondary-foreground: oklch(0.96 0.01 87);
-  --muted: oklch(0.3 0.03 153);
+  --muted: oklch(0.3 0.03 255);
   --muted-foreground: oklch(0.76 0.018 87);
-  --accent: oklch(0.66 0.1 45);
-  --accent-foreground: oklch(0.18 0.025 153);
+  --accent: oklch(0.78 0.12 85);
+  --accent-foreground: oklch(0.18 0.025 255);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.66 0.1 45);
-  --gold: oklch(0.66 0.1 45);
-  --gold-soft: oklch(0.42 0.055 45);
-  --gold-ink: oklch(0.72 0.09 48);
+  --ring: oklch(0.78 0.12 85);
+  --gold: oklch(0.78 0.12 85);
+  --gold-soft: oklch(0.4 0.06 85);
+  --gold-ink: oklch(0.84 0.11 85);
   --whatsapp: oklch(0.68 0.16 150);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);

@@ -5,11 +5,11 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter, WhatsappFab } from "@/components/site-footer";
 import { WhatsappIcon } from "@/components/brand-icons";
 import { SITE_URL, WHATSAPP_LINK } from "@/lib/site";
-import crest from "@/assets/crest.png";
+import emblem from "@/assets/emblem.png";
 
-const TITLE = "Quem Somos — Fujii Advogados";
+const TITLE = "Quem Somos — Fujii Advocacia & Consultoria Jurídica";
 const DESCRIPTION =
-  "Missão, visão, valores e propósito da Fujii Advogados: trabalho técnico, linguagem clara, sigilo absoluto e proximidade humana em Cuiabá (MT) e em todo o Brasil.";
+  "Missão, visão, valores e propósito da Fujii Advocacia & Consultoria Jurídica: trabalho técnico, linguagem clara, sigilo absoluto e proximidade humana em Cuiabá (MT) e em todo o Brasil.";
 
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
@@ -63,7 +63,7 @@ function QuemSomos() {
           <div className="relative mx-auto w-full max-w-[80rem] px-[5vw] py-16 sm:px-8 sm:py-20 xl:px-12">
             <p className="text-xs tracking-[0.28em] text-muted-foreground uppercase">Quem somos</p>
             <h1 className="mt-3 max-w-3xl text-3xl leading-tight sm:text-4xl lg:text-5xl">
-              <span className="text-gilded">Fujii Advogados</span>
+              <span className="text-gilded">Fujii Advocacia & Consultoria Jurídica</span>
               <span className="mt-2 block text-primary">
                 uma banca construída sobre técnica, discrição e confiança
               </span>
@@ -95,10 +95,13 @@ function QuemSomos() {
         <section className="border-y border-border bg-[image:var(--gradient-veil)] py-16 sm:py-20">
           <div className="mx-auto grid w-full max-w-[80rem] items-center gap-10 px-[5vw] sm:px-8 md:grid-cols-2 xl:px-12">
             <img
-              src={crest}
-              alt="Brasão institucional da Fujii Advogados"
+              src={emblem}
+              alt=""
+              aria-hidden="true"
+              width={225}
+              height={270}
               loading="lazy"
-              className="mx-auto w-full max-w-sm rounded-lg"
+              className="mx-auto h-auto w-full max-w-[16rem] object-contain drop-shadow-[0_18px_40px_rgba(15,30,61,0.18)]"
             />
             <div>
               <p className="text-xs tracking-[0.28em] text-muted-foreground uppercase">

@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter, WhatsappFab } from "@/components/site-footer";
 import { SITE_URL } from "@/lib/site";
 
-const TITLE = "Ética, Moral e Valores — Fujii Advogados";
+const TITLE = "Ética, Moral e Valores — Fujii Advocacia & Consultoria Jurídica";
 const DESCRIPTION =
   "Nosso pacto de integridade: sigilo profissional, prevenção de conflito de interesses, compliance anticorrupção, comunicação clara e honorários justos conforme a OAB.";
 

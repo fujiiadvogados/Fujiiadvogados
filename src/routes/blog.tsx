@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter, WhatsappFab } from "@/components/site-footer";
 import { SITE_URL, SOCIAL } from "@/lib/site";
 
-const TITLE = "Blog Jurídico — Fujii Advogados";
+const TITLE = "Blog Jurídico — Fujii Advocacia & Consultoria Jurídica";
 const DESCRIPTION =
   "Conteúdo informativo sobre direito tributário, agronegócio, crédito rural, previdenciário, trabalhista, médico e do consumidor, em linguagem clara e conforme a OAB.";
 

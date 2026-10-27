@@ -41,8 +41,23 @@ export function AreaCard({ area }: { area: Area }) {
         <p className="mt-3 text-sm leading-relaxed text-pretty text-foreground/75 hyphens-none">
           {area.promise}
         </p>
+        <ul className="mt-4 flex flex-wrap gap-1.5">
+          {area.subareas.slice(0, 4).map((s) => (
+            <li
+              key={s}
+              className="rounded-full border border-border bg-secondary/60 px-2.5 py-1 text-[0.68rem] leading-none text-foreground/70"
+            >
+              {s.split(" (")[0]}
+            </li>
+          ))}
+          {area.subareas.length > 4 && (
+            <li className="px-1 py-1 text-[0.68rem] leading-none text-gold-ink">
+              +{area.subareas.length - 4}
+            </li>
+          )}
+        </ul>
 
-        <div className="mt-6 flex flex-wrap items-center gap-2">
+        <div className="mt-auto flex flex-wrap items-center gap-2 pt-6">
           <Link
             to="/areas/$slug"
             params={{ slug: area.slug }}

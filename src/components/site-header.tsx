@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ChevronDown, Menu, X } from "lucide-react";
 
-import { GROUPS } from "@/lib/areas";
+import { AREAS } from "@/lib/areas";
 import { NAV, WHATSAPP_LINK } from "@/lib/site";
 import { WhatsappIcon } from "@/components/brand-icons";
-import crest from "@/assets/crest.png";
+import emblem from "@/assets/emblem.png";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -48,19 +48,20 @@ export function SiteHeader() {
       <div className="mx-auto flex w-full max-w-[80rem] items-center justify-between gap-3 px-[5vw] py-3 sm:px-8 sm:py-4 xl:px-12">
         <Link
           to="/"
-          aria-label="Fujii Advogados — página inicial"
+          aria-label="Fujii Advocacia & Consultoria Jurídica — página inicial"
           className="flex shrink-0 items-center gap-2.5 sm:gap-3"
         >
           <img
-            src={crest}
-            alt="Brasão Fujii Advogados"
-            width={748}
-            height={900}
-            className="h-9 w-auto shrink-0 object-contain sm:h-11"
+            src={emblem}
+            alt=""
+            aria-hidden="true"
+            width={225}
+            height={270}
+            className="h-11 w-auto shrink-0 object-contain sm:h-12"
           />
           <span className="flex flex-col leading-none">
-            <span className="font-display text-[1.05rem] tracking-[0.18em] whitespace-nowrap text-gilded uppercase sm:text-2xl sm:tracking-[0.22em] lg:text-xl lg:tracking-[0.18em] xl:text-2xl xl:tracking-[0.22em]">
-              Fujii Advogados
+            <span className="max-w-[11rem] font-display text-[0.7rem] leading-snug tracking-[0.14em] text-gilded uppercase sm:max-w-[14rem] sm:text-sm xl:text-[0.95rem]">
+              Fujii Advocacia & Consultoria Jurídica
             </span>
           </span>
         </Link>
@@ -78,23 +79,21 @@ export function SiteHeader() {
                     {item.label}
                     <ChevronDown className="h-3 w-3 transition-transform duration-300 group-hover:rotate-180" />
                   </Link>
-                  <div className="pointer-events-none absolute top-full left-1/2 z-50 w-[46rem] max-w-[80vw] -translate-x-1/2 pt-4 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                  <div className="pointer-events-none absolute top-full left-1/2 z-50 w-[58rem] max-w-[92vw] -translate-x-1/2 pt-4 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
                     <div className="grid gap-6 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-lift)] md:grid-cols-3">
-                      {GROUPS.map((g) => (
-                        <div key={g.id}>
-                          <p className="text-[0.6rem] tracking-[0.2em] text-gold-ink uppercase">
-                            {g.short}
-                          </p>
-                          <ul className="mt-3 space-y-1.5">
-                            {g.areas.map((a) => (
-                              <li key={a.slug}>
-                                <Link
-                                  to="/areas/$slug"
-                                  params={{ slug: a.slug }}
-                                  className="block text-[0.78rem] leading-snug text-foreground/75 transition-colors hover:text-gold-ink"
-                                >
-                                  {a.title}
-                                </Link>
+                      {AREAS.map((a) => (
+                        <div key={a.slug}>
+                          <Link
+                            to="/areas/$slug"
+                            params={{ slug: a.slug }}
+                            className="block text-[0.68rem] tracking-[0.16em] text-gold-ink uppercase transition-colors hover:text-primary"
+                          >
+                            {a.title}
+                          </Link>
+                          <ul className="mt-2 space-y-1">
+                            {a.subareas.slice(0, 5).map((s) => (
+                              <li key={s} className="text-[0.76rem] leading-snug text-foreground/70">
+                                {s}
                               </li>
                             ))}
                           </ul>
@@ -192,27 +191,20 @@ export function SiteHeader() {
                     }`}
                   >
                     <div className="min-h-0 space-y-4 py-2 pl-5">
-                      {GROUPS.map((g) => (
-                        <div key={g.id}>
-                          <p className="text-[0.6rem] tracking-[0.2em] text-gold-ink uppercase">
-                            {g.short}
-                          </p>
-                          <ul className="mt-2 space-y-1">
-                            {g.areas.map((a) => (
-                              <li key={a.slug}>
-                                <Link
-                                  to="/areas/$slug"
-                                  params={{ slug: a.slug }}
-                                  onClick={() => setOpen(false)}
-                                  className="block py-1.5 text-sm text-foreground/75 transition-colors hover:text-gold-ink"
-                                >
-                                  {a.title}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+                      <ul className="space-y-1">
+                        {AREAS.map((a) => (
+                          <li key={a.slug}>
+                            <Link
+                              to="/areas/$slug"
+                              params={{ slug: a.slug }}
+                              onClick={() => setOpen(false)}
+                              className="block py-1.5 text-sm text-foreground/75 transition-colors hover:text-gold-ink"
+                            >
+                              {a.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                       <Link
                         to="/areas"
                         onClick={() => setOpen(false)}

@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  # Redirecionamentos 301 das áreas antigas para as 6 novas
+  RewriteRule ^areas/(execucoes-fiscais)/?$ /areas/tributario [R=301,L]
+  RewriteRule ^areas/(credito-rural|endividamento-rural)/?$ /areas/agronegocio [R=301,L]
+  RewriteRule ^areas/(direito-medico|companhias-aereas|concessionarias)/?$ /areas/consumidor [R=301,L]
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
