@@ -4,7 +4,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter, WhatsappFab } from "@/components/site-footer";
 import { WhatsappIcon } from "@/components/brand-icons";
-import { AREAS, GROUPS, getArea } from "@/lib/areas";
+import { AREAS, getArea } from "@/lib/areas";
 import { SITE_URL, areaLink } from "@/lib/site";
 
 export const Route = createFileRoute("/areas/$slug")({
@@ -17,10 +17,10 @@ export const Route = createFileRoute("/areas/$slug")({
     const area = getArea(params.slug);
     if (!area) {
       return {
-        meta: [{ title: "Área não encontrada — Fujii Advogados" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Área não encontrada — Fujii Advocacia & Consultoria Jurídica" }, { name: "robots", content: "noindex" }],
       };
     }
-    const title = `${area.commercial} — ${area.title} | Fujii Advogados`;
+    const title = `${area.commercial} — ${area.title} | Fujii Advocacia & Consultoria Jurídica`;
     return {
       meta: [
         { title },
@@ -63,8 +63,7 @@ function AreaNotFound() {
 function AreaDetail() {
   const { slug } = Route.useLoaderData();
   const area = getArea(slug)!;
-  const group = GROUPS.find((g) => g.id === area.group)!;
-  const related = AREAS.filter((a) => a.group === area.group && a.slug !== area.slug);
+  const related = AREAS.filter((a) => a.slug !== area.slug);
 
   return (
     <div className="flex min-h-dvh flex-col bg-background text-foreground">
@@ -77,7 +76,7 @@ function AreaDetail() {
             <div>
               <nav aria-label="Trilha de navegação" className="text-xs text-muted-foreground">
                 <Link to="/areas" className="tracking-[0.16em] uppercase hover:text-gold-ink">
-                  {group.short}
+                  Áreas de atuação
                 </Link>
               </nav>
               <p className="mt-4 text-[0.7rem] tracking-[0.24em] text-gold-ink uppercase">
@@ -139,10 +138,10 @@ function AreaDetail() {
 
         <section className="border-y border-border bg-[image:var(--gradient-veil)] py-14 sm:py-20">
           <div className="mx-auto w-full max-w-[80rem] px-[5vw] sm:px-8 xl:px-12">
-            <h2 className="text-2xl text-primary sm:text-3xl">Serviços incluídos</h2>
+            <h2 className="text-2xl text-primary sm:text-3xl">Subáreas de atuação</h2>
             <div className="mt-3 h-px w-16 rule-gold" />
             <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {area.services.map((s) => (
+              {area.subareas.map((s) => (
                 <li
                   key={s}
                   className="flex gap-2 rounded-xl border border-border bg-card px-4 py-3 text-sm leading-relaxed text-foreground/80"
@@ -180,7 +179,7 @@ function AreaDetail() {
         {related.length > 0 && (
           <section className="border-t border-border py-14 sm:py-20">
             <div className="mx-auto w-full max-w-[80rem] px-[5vw] sm:px-8 xl:px-12">
-              <h2 className="text-2xl text-primary sm:text-3xl">Também em {group.short}</h2>
+              <h2 className="text-2xl text-primary sm:text-3xl">Outras áreas de atuação</h2>
               <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {related.map((r) => (
                   <Link

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, Lock, ScrollText, ShieldCheck, Timer } from "lucide-react";
 
@@ -7,28 +6,27 @@ import { SiteFooter, WhatsappFab } from "@/components/site-footer";
 import { WhatsappIcon } from "@/components/brand-icons";
 import { ContactForm } from "@/components/contact-form";
 import { AreasCarousel } from "@/components/areas-carousel";
-import { GROUPS } from "@/lib/areas";
 import { LocationMap } from "@/components/location-map";
 import { EMAIL, SITE_URL, WHATSAPP_LINK } from "@/lib/site";
-import logo from "@/assets/logo-fujii.png";
+import emblem from "@/assets/emblem.png";
 import crest from "@/assets/crest.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fujii Advogados — Advocacia e Consultoria Jurídica" },
+      { title: "Fujii Advocacia & Consultoria Jurídica" },
       {
         name: "description",
         content:
-          "Advocacia e consultoria jurídica em direito tributário, execuções fiscais, agronegócio, crédito rural, previdenciário, trabalhista, médico e do consumidor. Atendimento presencial e remoto.",
+          "Advocacia e consultoria jurídica em direito tributário, agronegócio, civil, consumidor, previdenciário e trabalhista. Atendimento presencial e remoto.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Fujii Advogados — Advocacia e Consultoria Jurídica" },
+      { property: "og:title", content: "Fujii Advocacia & Consultoria Jurídica" },
       {
         property: "og:description",
         content:
-          "Assessoria jurídica estratégica em tributário, execuções fiscais, agronegócio, crédito rural, previdenciário, trabalhista, médico e do consumidor.",
+          "Assessoria jurídica estratégica em tributário, agronegócio, civil, consumidor, previdenciário e trabalhista.",
       },
       { property: "og:url", content: `${SITE_URL}/` },
     ],
@@ -39,7 +37,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LegalService",
-          name: "Fujii Advogados",
+          name: "Fujii Advocacia & Consultoria Jurídica",
           description: "Advocacia e Consultoria Jurídica",
           url: SITE_URL,
           telephone: "+55 65 99234-8575",
@@ -76,9 +74,6 @@ const TRUST = [
 ];
 
 function Index() {
-  const [group, setGroup] = useState(GROUPS[0]!.id);
-  const active = GROUPS.find((g) => g.id === group) ?? GROUPS[0]!;
-
   return (
     <div className="flex min-h-dvh flex-col bg-background text-foreground">
       <SiteHeader />
@@ -90,16 +85,16 @@ function Index() {
           <div className="relative mx-auto w-full max-w-3xl px-[5vw] pt-10 pb-16 text-center sm:px-8 sm:pt-16 sm:pb-24">
             <img
               src={crest}
-              alt="Brasão Fujii Advogados"
-              width={748}
-              height={900}
+              alt="Fujii Advocacia e Consultoria Jurídica"
+              width={640}
+              height={640}
               fetchPriority="high"
-              className="mx-auto h-28 w-auto object-contain sm:h-36 lg:h-44"
+              className="mx-auto h-48 w-48 object-contain drop-shadow-[0_18px_40px_rgba(15,30,61,0.25)] sm:h-60 sm:w-60 lg:h-72 lg:w-72"
             />
-            <h1 className="mt-6 font-display text-3xl leading-[1.1] tracking-[0.16em] text-gilded uppercase sm:text-5xl lg:text-6xl">
-              Fujii Advogados
+            <h1 className="sr-only">
+              Fujii Advocacia & Consultoria Jurídica
             </h1>
-            <div className="mx-auto mt-4 h-px w-40 max-w-[60%] rule-gold" />
+            <div className="mx-auto mt-8 h-px w-40 max-w-[60%] rule-gold" />
             <p className="mt-6 text-lg leading-snug text-balance text-primary sm:text-xl">
               Defesa técnica com serenidade e estratégia
             </p>
@@ -140,31 +135,11 @@ function Index() {
             </p>
             <h2 className="mt-3 text-center text-3xl text-primary">Onde podemos ajudar você</h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
-              Selecione a área correspondente à sua demanda e conheça os serviços prestados. O
+              São seis áreas, cada uma com suas subáreas. Escolha a que corresponde à sua demanda. O
               atendimento inicial é feito com escuta atenta e sem compromisso.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-2">
-              {GROUPS.map((g) => (
-                <button
-                  key={g.id}
-                  type="button"
-                  onClick={() => setGroup(g.id)}
-                  aria-pressed={group === g.id}
-                  className={`rounded-full border px-5 py-2 text-xs tracking-[0.14em] uppercase transition-all duration-300 ${
-                    group === g.id
-                      ? "border-gold bg-primary text-primary-foreground shadow-[var(--shadow-soft)]"
-                      : "border-border text-primary hover:bg-secondary"
-                  }`}
-                >
-                  {g.short}
-                </button>
-              ))}
-            </div>
-            <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground hyphens-none">
-              {active.tagline}
-            </p>
             <div className="mt-10">
-              <AreasCarousel areas={active.areas} />
+              <AreasCarousel />
             </div>
             <div className="mt-10 text-center">
               <Link
@@ -181,12 +156,13 @@ function Index() {
         <section className="mx-auto w-full max-w-[80rem] px-[5vw] py-16 sm:px-8 sm:py-20 xl:px-12">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <img
-              src={logo}
-              alt="Fujii Advogados — Advocacia e Consultoria Jurídica"
-              width={1200}
-              height={756}
+              src={emblem}
+              alt=""
+              aria-hidden="true"
+              width={225}
+              height={270}
               loading="lazy"
-              className="mx-auto w-full max-w-sm object-contain"
+              className="mx-auto h-auto w-full max-w-[15rem] object-contain drop-shadow-[0_18px_40px_rgba(15,30,61,0.18)]"
             />
 
             <div>

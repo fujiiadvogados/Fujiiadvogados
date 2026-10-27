@@ -10,8 +10,8 @@ export function SiteFooter() {
       <div className="mx-auto w-full max-w-[80rem] px-[5vw] py-14 sm:px-8 xl:px-12">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-display text-lg tracking-[0.2em] text-gilded uppercase">
-              Fujii Advogados
+            <p className="font-display text-base leading-snug tracking-[0.14em] text-gilded uppercase">
+              Fujii Advocacia & Consultoria Jurídica
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Atendimento presencial em Cuiabá (MT), mediante agendamento, e atendimento remoto por
@@ -82,7 +82,7 @@ export function SiteFooter() {
                   className="inline-flex items-center gap-2 text-primary transition-colors hover:text-gold-ink"
                 >
                   <FacebookIcon className="h-4 w-4 text-[oklch(0.52_0.16_260)]" />
-                  Facebook · Fujii Advogados
+                  Facebook · Fujii Advocacia & Consultoria Jurídica
                 </a>
               </li>
               <li>
@@ -104,7 +104,7 @@ export function SiteFooter() {
                   className="inline-flex items-center gap-2 text-primary transition-colors hover:text-gold-ink"
                 >
                   <TiktokIcon className="h-4 w-4 text-foreground" />
-                  TikTok · Fujii Advogados
+                  TikTok · Fujii Advocacia & Consultoria Jurídica
                 </a>
               </li>
               <li>
@@ -137,7 +137,7 @@ export function SiteFooter() {
             dados pelo e-mail {EMAIL}.
           </p>
           <p className="pt-2 text-center">
-            © {new Date().getFullYear()} Fujii Advogados. Todos os direitos reservados.
+            © {new Date().getFullYear()} Fujii Advocacia & Consultoria Jurídica. Todos os direitos reservados.
           </p>
         </div>
       </div>

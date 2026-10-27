@@ -1,0 +1,54 @@
+name: Build e publicar public_html
+
+# A cada push na main, gera o site estático e atualiza a pasta public_html
+# (que a Hostinger sincroniza via webhook). Também pode ser disparado manualmente.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "public_html/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-publish
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Gerar páginas estáticas
+        run: node scripts/gen-static.mjs
+
+      - name: Montar public_html
+        run: |
+          rm -rf public_html
+          cp -r dist/client public_html
+          cp public/.htaccess public_html/.htaccess
+          cp public/_headers public_html/_headers
+
+      - name: Commit e push do public_html
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -f public_html
+          git diff --cached --quiet && echo "Sem alterações" && exit 0
+          git commit -m "build: atualiza public_html [skip ci]"
+          git push

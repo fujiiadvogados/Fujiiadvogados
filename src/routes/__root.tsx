@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Fujii Advogados — Advocacia e Consultoria Jurídica" },
+      { title: "Fujii Advocacia & Consultoria Jurídica" },
       {
         name: "description",
         content:
-          "Advocacia e consultoria jurídica: tributário, agronegócio, crédito rural, previdenciário, trabalhista e mais.",
+          "Advocacia e consultoria jurídica: tributário, agronegócio, civil, consumidor, previdenciário e trabalhista.",
       },
-      { name: "author", content: "Fujii Advogados" },
-      { property: "og:title", content: "Fujii Advogados — Advocacia e Consultoria Jurídica" },
+      { name: "author", content: "Fujii Advocacia & Consultoria Jurídica" },
+      { property: "og:title", content: "Fujii Advocacia & Consultoria Jurídica" },
       {
         property: "og:description",
         content: "Assessoria jurídica estratégica, próxima e transparente.",

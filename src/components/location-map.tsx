@@ -43,7 +43,7 @@ export function LocationMap() {
 
         <div className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-lift)]">
           <iframe
-            title="Mapa da localização do escritório Fujii Advogados"
+            title="Mapa da localização do escritório Fujii Advocacia & Consultoria Jurídica"
             src={MAPS_EMBED_URL}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

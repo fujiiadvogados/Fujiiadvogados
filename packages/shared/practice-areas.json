@@ -1,24 +1,12 @@
 [
   {
     "slug": "tributario",
-    "group": "empresas",
     "title": "Direito Tributário",
     "commercial": "Redução e Revisão da Carga Tributária",
     "promise": "Menos imposto pago a mais, mais previsibilidade no caixa.",
-    "description": "Assessoria tributária estratégica para empresas, produtores rurais e pessoas físicas: planejamento fiscal, recuperação de créditos e defesa em autuações nas esferas administrativa e judicial.",
+    "description": "Assessoria tributária e defesa em execuções fiscais para empresas, produtores rurais e pessoas físicas: planejamento, recuperação de créditos e atuação administrativa e judicial.",
     "problem": "Autuações inesperadas, tributos recolhidos indevidamente e insegurança sobre o enquadramento fiscal comprometem o resultado do negócio e a tomada de decisão.",
     "solution": "Diagnóstico tributário do último quinquênio, identificação de créditos recuperáveis, revisão do enquadramento e defesa técnica em processos administrativos e judiciais, com relatório objetivo de riscos e oportunidades.",
-    "services": [
-      "Planejamento Tributário",
-      "Recuperação de Créditos Tributários",
-      "Consultoria Tributária",
-      "Contencioso Tributário",
-      "Defesas Administrativas",
-      "Revisão de Tributos",
-      "Parcelamentos Tributários",
-      "Compensação Tributária",
-      "Due Diligence Tributária"
-    ],
     "faq": [
       {
         "q": "É possível recuperar tributos pagos a mais?",
@@ -28,90 +16,26 @@
         "q": "Como funciona a análise inicial?",
         "a": "Reunimos documentos fiscais e contábeis, mapeamos o cenário e apresentamos um parecer com as alternativas cabíveis, os custos envolvidos e os riscos de cada caminho."
       }
-    ]
-  },
-  {
-    "slug": "execucoes-fiscais",
-    "group": "empresas",
-    "title": "Execuções Fiscais",
-    "commercial": "Defesa contra Cobranças e Bloqueios do Fisco",
-    "promise": "Proteção do patrimônio diante de execuções e penhoras.",
-    "description": "Defesa técnica contra cobranças e execuções promovidas pela União, Estados, Municípios e autarquias, com foco na preservação do patrimônio do contribuinte.",
-    "problem": "Uma execução fiscal pode bloquear contas, penhorar bens e paralisar a atividade da empresa ou da propriedade rural antes mesmo da discussão do mérito.",
-    "solution": "Análise da certidão de dívida ativa, verificação de prescrição e decadência, apresentação de exceção de pré-executividade ou embargos, negociação de garantias e pedidos de levantamento de penhora.",
-    "services": [
-      "Defesa em Execuções Fiscais",
-      "Embargos à Execução",
-      "Exceção de Pré-Executividade",
-      "Revisão da Dívida Ativa",
-      "Levantamento de Penhoras",
-      "Garantias Judiciais",
-      "Prescrição e Decadência",
-      "Suspensão da Exigibilidade do Crédito Tributário",
-      "Negociação Fiscal"
     ],
-    "faq": [
-      {
-        "q": "Recebi uma citação de execução fiscal. Qual o prazo?",
-        "a": "Os prazos são curtos e variam conforme a medida cabível. O ideal é buscar orientação imediatamente após a citação para preservar todas as defesas possíveis."
-      },
-      {
-        "q": "É possível discutir a dívida sem oferecer bens em garantia?",
-        "a": "Em determinadas hipóteses, matérias de ordem pública podem ser alegadas por exceção de pré-executividade, sem garantia. A adequação depende da documentação do caso."
-      }
-    ]
-  },
-  {
-    "slug": "trabalhista",
-    "group": "empresas",
-    "title": "Direito do Trabalho",
-    "commercial": "Relações de Trabalho com Segurança Jurídica",
-    "promise": "Prevenção de passivos e defesa técnica em reclamações.",
-    "description": "Atuação preventiva e contenciosa nas relações de trabalho, para empregados, empresas e produtores rurais.",
-    "problem": "Contratos mal formalizados, jornadas sem controle e rescisões conduzidas sem critério geram passivos trabalhistas relevantes e disputas evitáveis.",
-    "solution": "Revisão de contratos e rotinas, adequação de jornada e verbas, condução de acordos e defesa em reclamações trabalhistas com estratégia definida desde a primeira audiência.",
-    "services": [
-      "Rescisões e Verbas Rescisórias",
-      "Reclamações Trabalhistas",
-      "Horas Extras e Adicionais",
-      "Assédio Moral e Justa Causa",
-      "Acidente de Trabalho e Estabilidade",
-      "Terceirização e Vínculo Empregatício",
-      "Compliance e Consultoria Trabalhista Preventiva",
-      "Negociações e Acordos Coletivos"
-    ],
-    "faq": [
-      {
-        "q": "O escritório atende empregados e empresas?",
-        "a": "Sim, observadas as regras de impedimento e conflito de interesses. Cada demanda é analisada previamente para garantir atuação ética."
-      },
-      {
-        "q": "Vale a pena fazer acordo?",
-        "a": "Depende do risco, da prova disponível e do custo do litígio. Apresentamos o cenário de forma objetiva para que a decisão seja sua."
-      }
+    "subareas": [
+      "Planejamento e Consultoria Tributária",
+      "Contencioso Administrativo e Judicial",
+      "Recuperação de Créditos e Compensação",
+      "Execuções Fiscais e Exceção de Pré-Executividade",
+      "Revisão da Dívida Ativa e Levantamento de Penhoras",
+      "Parcelamentos e Transação Tributária",
+      "Due Diligence Tributária",
+      "Tributação Rural (ITR e Funrural)"
     ]
   },
   {
     "slug": "agronegocio",
-    "group": "rural",
     "title": "Direito do Agronegócio",
     "commercial": "Segurança Jurídica do Campo ao Contrato",
     "promise": "Contratos, terra e sucessão sob controle.",
-    "description": "Assessoria a produtores rurais, agroindústrias e investidores em todas as fases da cadeia produtiva e contratual do campo.",
+    "description": "Segurança jurídica para o produtor rural e o agronegócio: contratos, crédito rural, renegociação de dívidas, garantias, safra e propriedade.",
     "problem": "Contratos agrários genéricos, áreas sem regularização e ausência de planejamento sucessório expõem o patrimônio rural a litígios e perdas.",
     "solution": "Elaboração e revisão de contratos agrários, due diligence de imóveis rurais, estruturação de garantias e planejamento patrimonial e sucessório da atividade.",
-    "services": [
-      "Consultoria ao Produtor Rural",
-      "Contratos Agrários",
-      "Arrendamento Rural",
-      "Parcerias Rurais",
-      "Compra e Venda de Imóveis Rurais",
-      "Regularização Fundiária",
-      "Garantias Reais e Fiduciárias",
-      "Planejamento Patrimonial Rural",
-      "Sucessão Patrimonial Rural",
-      "Contencioso do Agronegócio"
-    ],
     "faq": [
       {
         "q": "Contrato de arrendamento pode ser feito em modelo padrão?",
@@ -121,113 +45,56 @@
         "q": "Atendem produtores fora de Mato Grosso?",
         "a": "Sim. O atendimento consultivo é feito por videoconferência para todo o país, com deslocamento quando o caso exigir."
       }
+    ],
+    "subareas": [
+      "Contratos Agrários (arrendamento, parceria, CPR, barter)",
+      "Crédito Rural (custeio, investimento e comercialização)",
+      "Endividamento Rural e Renegociação",
+      "Alongamento e Prorrogação de Dívidas",
+      "Garantias Rurais (penhor, hipoteca, alienação fiduciária)",
+      "Frustração de Safra, Proagro e Seguro Rural",
+      "Direito Ambiental Rural (CAR, Reserva Legal e APP)",
+      "Posse, Propriedade e Usucapião Rural",
+      "Sucessão e Holding Rural"
     ]
   },
   {
-    "slug": "credito-rural",
-    "group": "rural",
-    "title": "Créditos Rurais",
-    "commercial": "Crédito Rural Contratado com Clareza",
-    "promise": "Você assina sabendo exatamente o que está assinando.",
-    "description": "Análise, estruturação e revisão de operações de crédito rural, cédulas e garantias, para que o financiamento sirva à atividade e não o contrário.",
-    "problem": "Cláusulas de encargos, garantias cruzadas e vencimento antecipado passam despercebidas na assinatura e aparecem no pior momento da safra.",
-    "solution": "Leitura técnica da cédula antes da assinatura, conferência de taxas e garantias, adequação do fluxo de pagamento ao ciclo produtivo e acompanhamento da operação junto à instituição financeira.",
-    "services": [
-      "Crédito Rural",
-      "Cédulas de Crédito Rural (CCR)",
-      "Cédulas de Produto Rural (CPR)",
-      "Revisão de Contratos Bancários",
-      "Estruturação de Garantias",
-      "Consultoria Preventiva em Financiamentos",
-      "Acompanhamento de Operações com Bancos"
-    ],
+    "slug": "civil",
+    "title": "Direito Civil",
+    "commercial": "Contratos, Cobranças e Indenizações com Segurança",
+    "promise": "Estratégia para resolver o conflito e proteger o seu patrimônio.",
+    "description": "Atuação consultiva e contenciosa em contratos, responsabilidade civil, família, sucessões, imóveis, cobrança e execução, para pessoas e empresas.",
+    "problem": "Contratos mal redigidos, dívidas não pagas e conflitos patrimoniais costumam se agravar com o tempo, e prazos perdidos podem comprometer direitos.",
+    "solution": "Leitura do caso e dos documentos, definição da via mais segura (acordo ou ação), medidas de urgência quando cabíveis e, na cobrança, pesquisa patrimonial para dar efetividade ao crédito.",
     "faq": [
       {
-        "q": "Vale contratar advogado antes de assinar a cédula?",
-        "a": "Sim. A revisão prévia é a etapa mais barata e mais eficaz de todo o processo, porque evita discussões judiciais depois."
+        "q": "Vale tentar um acordo antes de entrar na Justiça?",
+        "a": "Em muitos casos sim: a composição costuma ser mais rápida e barata. A estratégia é definida após a análise dos documentos e do risco de cada caminho."
       },
       {
-        "q": "É possível revisar contrato já assinado?",
-        "a": "É possível analisar encargos e cláusulas e, havendo fundamento, discutir administrativa ou judicialmente."
+        "q": "Como funciona a cobrança de uma dívida?",
+        "a": "Analisamos o título, tentamos a solução extrajudicial e, se necessário, ajuizamos a ação ou execução, buscando bens do devedor para satisfazer o crédito. Não há promessa de resultado."
       }
-    ]
-  },
-  {
-    "slug": "endividamento-rural",
-    "group": "rural",
-    "title": "Endividamento Rural",
-    "commercial": "Reestruturação de Dívidas do Produtor Rural",
-    "promise": "Fôlego de caixa para manter a atividade em pé.",
-    "description": "Reestruturação financeira e negociação estratégica de passivos rurais, com foco na continuidade da atividade produtiva.",
-    "problem": "Frustração de safra, variação cambial e juros elevados transformam operações saudáveis em dívidas impagáveis, com risco de execução e perda da terra.",
-    "solution": "Mapeamento completo do passivo, negociação com instituições financeiras, alongamento de operações, discussão de encargos indevidos e defesa em execuções bancárias.",
-    "services": [
-      "Renegociação de Dívidas Rurais",
-      "Alongamento de Operações Rurais",
-      "Revisão de Encargos e Juros",
-      "Defesa em Execuções Bancárias",
-      "Recuperação Financeira Rural",
-      "Negociação com Instituições Financeiras",
-      "Planejamento de Fluxo de Pagamento"
     ],
-    "faq": [
-      {
-        "q": "Ainda dá para negociar depois da execução ajuizada?",
-        "a": "Sim. A negociação segue possível durante o processo, muitas vezes em condições melhores quando acompanhada de defesa técnica."
-      },
-      {
-        "q": "A propriedade pode ser protegida?",
-        "a": "Há instrumentos legais de proteção e discussão de garantias. A avaliação depende da estrutura patrimonial e dos contratos firmados."
-      }
-    ]
-  },
-  {
-    "slug": "previdenciario",
-    "group": "cidadao",
-    "title": "Direito Previdenciário",
-    "commercial": "Aposentadoria e Benefícios do INSS",
-    "promise": "O benefício correto, no melhor momento e pelo maior valor devido.",
-    "description": "Assessoria completa para obtenção, revisão e planejamento de benefícios previdenciários, na via administrativa e judicial.",
-    "problem": "Pedidos indeferidos, tempo de contribuição não reconhecido e aposentadorias concedidas com valor abaixo do devido são situações frequentes e reversíveis.",
-    "solution": "Análise do CNIS, simulação de cenários de aposentadoria, instrução correta do requerimento, recursos administrativos e ações judiciais quando necessário.",
-    "services": [
-      "Planejamento Previdenciário",
-      "Aposentadorias",
-      "Revisão de Benefícios",
-      "Benefícios por Incapacidade",
-      "Auxílio por Incapacidade Temporária",
-      "Salário-Maternidade e Pensão por Morte",
-      "Benefício de Prestação Continuada (BPC/LOAS)",
-      "Recursos Administrativos e Ações Previdenciárias"
-    ],
-    "faq": [
-      {
-        "q": "Meu pedido foi negado. Ainda tenho chance?",
-        "a": "O indeferimento pode ser revisto por recurso administrativo ou ação judicial. A chance real depende da documentação e do fundamento da negativa."
-      },
-      {
-        "q": "O que é planejamento previdenciário?",
-        "a": "É o estudo que compara cenários de contribuição e regras de transição para indicar o momento e o formato de aposentadoria mais vantajosos."
-      }
+    "subareas": [
+      "Contratos e Obrigações",
+      "Responsabilidade Civil e Indenizações",
+      "Direito de Família e Sucessões",
+      "Direito Imobiliário e Posse",
+      "Cobrança e Execução de Títulos",
+      "Direito Bancário",
+      "Direito Empresarial e Societário",
+      "Recursos e Cumprimento de Sentença"
     ]
   },
   {
     "slug": "consumidor",
-    "group": "cidadao",
     "title": "Direito do Consumidor",
     "commercial": "Defesa do Consumidor em Cobranças e Contratos",
     "promise": "Cobrança indevida contestada e nome limpo de volta.",
-    "description": "Atuação na defesa de direitos do consumidor e consultoria preventiva a empresas em relações de consumo.",
+    "description": "Defesa do consumidor em cobranças, bancos, planos de saúde, direito médico, companhias aéreas e concessionárias de serviços essenciais.",
     "problem": "Negativações indevidas, cobranças que não se reconhecem e contratos com cláusulas abusivas afetam crédito, rotina e tranquilidade.",
     "solution": "Notificação e contestação das cobranças, pedido de exclusão de restrições, revisão contratual e pleito de reparação quando houver dano comprovado.",
-    "services": [
-      "Cobranças e Negativações Indevidas",
-      "Revisão Contratual e Indenizações",
-      "Produtos com Defeito e Falhas na Prestação de Serviços",
-      "Relações Bancárias e Comércio Eletrônico",
-      "Fraudes e Golpes Digitais",
-      "Defesa em Processos Judiciais de Consumo"
-    ],
     "faq": [
       {
         "q": "Preciso reclamar na empresa antes?",
@@ -237,93 +104,74 @@
         "q": "Toda cobrança indevida gera indenização?",
         "a": "Não. A reparação depende da comprovação do dano e das circunstâncias do caso, avaliadas previamente com franqueza."
       }
+    ],
+    "subareas": [
+      "Cobranças Indevidas e Negativação",
+      "Contratos Bancários e de Crédito",
+      "Planos de Saúde: negativas e reajustes",
+      "Erro Médico e Direito da Saúde",
+      "Medicamentos e Tratamentos pelo SUS",
+      "Companhias Aéreas",
+      "Concessionárias de Água, Energia e Telecomunicações",
+      "Vícios de Produtos e Serviços"
     ]
   },
   {
-    "slug": "direito-medico",
-    "group": "cidadao",
-    "title": "Direito Médico e da Saúde",
-    "commercial": "Acesso a Tratamentos, Cirurgias e Medicamentos",
-    "promise": "Tratamento negado pode ser discutido com urgência.",
-    "description": "Proteção jurídica do direito à saúde, com atuação contra planos de saúde e entes públicos para garantir procedimentos, tratamentos e medicamentos.",
-    "problem": "Negativas de cobertura, medicamentos de alto custo fora da lista e filas em procedimentos urgentes colocam a saúde em risco durante a espera.",
-    "solution": "Reunião de laudos e prescrições, pedido administrativo formal e, quando cabível, medida judicial com pedido de urgência para assegurar o tratamento.",
-    "services": [
-      "Demandas contra Planos de Saúde",
-      "Negativa de Cobertura",
-      "Medicamentos de Alto Custo",
-      "Cirurgias, Exames e Tratamentos Especializados",
-      "Home Care e Internações",
-      "Demandas contra o SUS",
-      "Responsabilidade Civil Médica",
-      "Ações de Obrigação de Fazer"
-    ],
+    "slug": "previdenciario",
+    "title": "Direito Previdenciário",
+    "commercial": "Aposentadoria e Benefícios do INSS",
+    "promise": "O benefício correto, no melhor momento e pelo maior valor devido.",
+    "description": "Assessoria completa para obtenção, revisão e planejamento de benefícios previdenciários, na via administrativa e judicial.",
+    "problem": "Pedidos indeferidos, tempo de contribuição não reconhecido e aposentadorias concedidas com valor abaixo do devido são situações frequentes e reversíveis.",
+    "solution": "Análise do CNIS, simulação de cenários de aposentadoria, instrução correta do requerimento, recursos administrativos e ações judiciais quando necessário.",
     "faq": [
       {
-        "q": "Quanto tempo demora uma decisão de urgência?",
-        "a": "Pedidos liminares costumam ser apreciados em poucos dias, variando conforme a comarca e a documentação apresentada."
+        "q": "Meu pedido foi negado. Ainda tenho chance?",
+        "a": "O indeferimento pode ser revisto por recurso administrativo ou ação judicial. A chance real depende da documentação e do fundamento da negativa."
       },
       {
-        "q": "Quais documentos são essenciais?",
-        "a": "Relatório médico detalhado, prescrição, exames e a negativa formal do plano ou do órgão público."
+        "q": "O que é planejamento previdenciário?",
+        "a": "É o estudo que compara cenários de contribuição e regras de transição para indicar o momento e o formato de aposentadoria mais vantajosos."
       }
+    ],
+    "subareas": [
+      "Aposentadorias (idade, tempo, especial e PcD)",
+      "Benefício por Incapacidade",
+      "BPC/LOAS",
+      "Pensão por Morte e Auxílio-Reclusão",
+      "Revisão de Benefícios",
+      "Planejamento Previdenciário e Análise de CNIS",
+      "Salário-Maternidade e Auxílio-Acidente",
+      "Servidores Públicos (RPPS)"
     ]
   },
   {
-    "slug": "companhias-aereas",
-    "group": "cidadao",
-    "title": "Demandas contra Companhias Aéreas",
-    "commercial": "Voo Cancelado, Atrasado ou Bagagem Extraviada",
-    "promise": "O transtorno da viagem não precisa ficar por isso mesmo.",
-    "description": "Atuação em demandas de transporte aéreo: cancelamentos, atrasos relevantes, overbooking, extravio e danos à bagagem.",
-    "problem": "Compromissos perdidos, custos não reembolsados e atendimento evasivo das companhias transformam a viagem em prejuízo material e desgaste real.",
-    "solution": "Organização das provas da viagem, cálculo dos prejuízos, pedido administrativo à companhia e ação judicial com pedido de reparação quando não houver solução.",
-    "services": [
-      "Cancelamento e Atraso de Voo",
-      "Overbooking e Preterição de Embarque",
-      "Extravio, Avaria e Atraso de Bagagem",
-      "Reacomodação e Reembolso de Passagens",
-      "Conexões Perdidas",
-      "Danos Materiais e Morais em Transporte Aéreo"
-    ],
+    "slug": "trabalhista",
+    "title": "Direito do Trabalho",
+    "commercial": "Relações de Trabalho com Segurança Jurídica",
+    "promise": "Prevenção de passivos e defesa técnica em reclamações.",
+    "description": "Atuação preventiva e contenciosa nas relações de trabalho, para empregados, empresas e produtores rurais.",
+    "problem": "Contratos mal formalizados, jornadas sem controle e rescisões conduzidas sem critério geram passivos trabalhistas relevantes e disputas evitáveis.",
+    "solution": "Revisão de contratos e rotinas, adequação de jornada e verbas, condução de acordos e defesa em reclamações trabalhistas com estratégia definida desde a primeira audiência.",
     "faq": [
       {
-        "q": "Qual o prazo para reclamar?",
-        "a": "Voos nacionais e internacionais seguem prazos distintos. Quanto antes a demanda for analisada, maior a preservação das provas."
+        "q": "O escritório atende empregados e empresas?",
+        "a": "Sim, observadas as regras de impedimento e conflito de interesses. Cada demanda é analisada previamente para garantir atuação ética."
       },
       {
-        "q": "Quais provas guardar?",
-        "a": "Cartão de embarque, comunicados da companhia, comprovantes de gastos e registros de atendimento."
+        "q": "Vale a pena fazer acordo?",
+        "a": "Depende do risco, da prova disponível e do custo do litígio. Apresentamos o cenário de forma objetiva para que a decisão seja sua."
       }
-    ]
-  },
-  {
-    "slug": "concessionarias",
-    "group": "cidadao",
-    "title": "Demandas contra Concessionárias",
-    "commercial": "Contas Abusivas de Água, Energia e Telecom",
-    "promise": "Cobrança revista, serviço restabelecido, corte indevido contestado.",
-    "description": "Demandas contra concessionárias de água, energia elétrica e telecomunicações, envolvendo cobranças, cortes e falhas na prestação do serviço.",
-    "problem": "Faturas fora do padrão de consumo, cortes sem aviso e serviços cobrados sem contratação afetam residências, comércios e propriedades rurais.",
-    "solution": "Revisão do histórico de consumo, contestação administrativa junto à concessionária e à agência reguladora e, se necessário, medida judicial para restabelecimento e revisão de valores.",
-    "services": [
-      "Cobrança Abusiva de Energia Elétrica",
-      "Faturas de Água Fora do Padrão de Consumo",
-      "Corte Indevido de Serviço Essencial",
-      "Recuperação de Consumo e TOI",
-      "Falhas em Telefonia e Internet",
-      "Serviços Cobrados sem Contratação",
-      "Danos Elétricos em Equipamentos"
     ],
-    "faq": [
-      {
-        "q": "A concessionária pode cortar o serviço por débito antigo?",
-        "a": "Há limites legais para a suspensão de serviço essencial, especialmente em débitos pretéritos e discutidos. Cada caso exige análise da fatura e do histórico."
-      },
-      {
-        "q": "Recebi cobrança retroativa de consumo. É devida?",
-        "a": "A chamada recuperação de consumo exige critérios técnicos rigorosos e ampla defesa; irregularidades no procedimento podem invalidar a cobrança."
-      }
+    "subareas": [
+      "Reclamações Trabalhistas",
+      "Verbas Rescisórias e Horas Extras",
+      "Insalubridade e Periculosidade",
+      "Reconhecimento de Vínculo",
+      "Acidente de Trabalho e Doença Ocupacional",
+      "Assédio e Danos Morais",
+      "Execução Trabalhista e Recursos",
+      "Defesa e Consultoria Empresarial"
     ]
   }
 ]

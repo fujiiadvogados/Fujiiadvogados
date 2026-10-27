@@ -3,12 +3,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter, WhatsappFab } from "@/components/site-footer";
 import { AreaCard } from "@/components/area-card";
-import { GROUPS } from "@/lib/areas";
+import { AREAS } from "@/lib/areas";
 import { SITE_URL } from "@/lib/site";
 
-const TITLE = "Áreas de atuação — Fujii Advogados";
+const TITLE = "Áreas de atuação — Fujii Advocacia & Consultoria Jurídica";
 const DESCRIPTION =
-  "Soluções jurídicas para empresas e contribuintes, produtores rurais e cidadãos: tributário, execuções fiscais, agronegócio, crédito rural, previdenciário, consumidor, saúde e trabalho.";
+  "Seis áreas de atuação com suas subáreas: direito tributário, agronegócio, civil, consumidor, previdenciário e trabalhista.";
 
 export const Route = createFileRoute("/areas/")({
   head: () => ({
@@ -39,37 +39,45 @@ function AreasIndex() {
               Áreas de atuação
             </p>
             <h1 className="mt-3 max-w-3xl text-3xl leading-tight text-primary sm:text-4xl">
-              Soluções jurídicas organizadas por quem precisa delas
+              Seis áreas de atuação, cada uma com suas subáreas
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground hyphens-none">
-              Cada frente de atuação reúne serviços correlatos, com diagnóstico prévio e avaliação
-              honesta das chances reais de êxito. Escolha o grupo que corresponde à sua realidade.
+              Cada área reúne subáreas correlatas, com diagnóstico prévio e avaliação honesta das chances reais de êxito. Veja abaixo onde podemos ajudar.
             </p>
           </div>
         </section>
 
-        {GROUPS.map((group, i) => (
-          <section
-            key={group.id}
-            id={group.id}
-            className={`scroll-mt-24 py-14 sm:py-20 ${
-              i % 2 === 1 ? "border-y border-border bg-[image:var(--gradient-veil)]" : ""
-            }`}
-          >
-            <div className="mx-auto w-full max-w-[80rem] px-[5vw] sm:px-8 xl:px-12">
-              <h2 className="text-2xl text-primary sm:text-3xl">{group.label}</h2>
-              <div className="mt-3 h-px w-16 rule-gold" />
-              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground hyphens-none">
-                {group.tagline}
-              </p>
-              <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {group.areas.map((area) => (
-                  <AreaCard key={area.slug} area={area} />
-                ))}
-              </div>
+        <section className="py-14 sm:py-20">
+          <div className="mx-auto w-full max-w-[80rem] px-[5vw] sm:px-8 xl:px-12">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {AREAS.map((area) => (
+                <AreaCard key={area.slug} area={area} />
+              ))}
             </div>
-          </section>
-        ))}
+          </div>
+        </section>
+
+        <section className="border-t border-border bg-[image:var(--gradient-veil)] py-14 sm:py-20">
+          <div className="mx-auto w-full max-w-[80rem] px-[5vw] sm:px-8 xl:px-12">
+            <h2 className="text-2xl text-primary sm:text-3xl">Subáreas de cada área</h2>
+            <div className="mt-3 h-px w-16 rule-gold" />
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {AREAS.map((area) => (
+                <div
+                  key={area.slug}
+                  className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)]"
+                >
+                  <h3 className="text-lg text-primary">{area.title}</h3>
+                  <ul className="mt-3 space-y-1.5 text-sm leading-snug text-foreground/75">
+                    {area.subareas.map((s) => (
+                      <li key={s}>{s}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />

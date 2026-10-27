@@ -94,7 +94,7 @@ export function ContactForm() {
     }
 
     const subject = encodeURIComponent(`Contato pelo site — ${areaTitle}`);
-    const body = encodeURIComponent(`Olá! Contato pelo site Fujii Advogados.\n\n${lines}`);
+    const body = encodeURIComponent(`Olá! Contato pelo site Fujii Advocacia & Consultoria Jurídica.\n\n${lines}`);
     window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
     setStatus("sent");
     setFeedback(
