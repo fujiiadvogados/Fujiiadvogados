@@ -1,4 +1,4 @@
-# Manual de Instalação e Publicação — Fujii Advogados
+# Manual de Instalação e Publicação — Fujii Advocacia & Consultoria Jurídica
 
 Passo a passo para colocar o site no ar na Hostinger (plano mais barato),
 sincronizado com o GitHub, no domínio `fujiiadvogados.com.br`.
@@ -65,7 +65,7 @@ O build cria `dist/client/` — é essa pasta que vira o site.
 ```bash
 git init
 git add .
-git commit -m "Site Fujii Advogados"
+git commit -m "Site Fujii Advocacia & Consultoria Jurídica"
 git branch -M main
 git remote add origin https://github.com/SEU-USUARIO/fujiiadvogados.git
 git push -u origin main
@@ -205,3 +205,20 @@ git add . && git commit -m "atualizacao" && git push
 ```
 
 O webhook publica sozinho em poucos segundos.
+
+---
+
+## 13. Publicação automática (GitHub Actions)
+
+O arquivo `.github/workflows/build-publish.yml` faz o build e atualiza a pasta
+`public_html` sozinho a cada push na `main`. Fluxo:
+
+```bash
+git add .
+git commit -m "atualizacao"
+git push origin main
+```
+
+Depois do push, acompanhe em **GitHub → Actions**. Quando terminar, o commit
+`build: atualiza public_html` dispara o webhook da Hostinger. O `.htaccess`
+(com os redirecionamentos 301 das áreas antigas) fica em `public/.htaccess`.
