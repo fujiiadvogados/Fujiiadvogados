@@ -36,17 +36,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://fujiiadvogados.com.br/areas/previdenciario</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://fujiiadvogados.com.br/areas/civil</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fujiiadvogados.com.br/areas/consumidor</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fujiiadvogados.com.br/areas/previdenciario</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
