@@ -7,7 +7,7 @@ import { SITE_URL, SOCIAL } from "@/lib/site";
 
 const TITLE = "Blog Jurídico — Fujii Advocacia & Consultoria Jurídica";
 const DESCRIPTION =
-  "Conteúdo informativo sobre direito tributário, agronegócio, crédito rural, previdenciário, trabalhista, médico e do consumidor, em linguagem clara e conforme a OAB.";
+  "Conteúdo informativo sobre direito tributário, agrário e do agronegócio, previdenciário, civil, do consumidor e do trabalho, em linguagem clara e conforme a OAB.";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -39,8 +39,8 @@ const TEMAS = [
     text: "Prescrição, exceção de pré-executividade, penhoras e caminhos para proteger o patrimônio de forma legal.",
   },
   {
-    title: "Previdenciário e saúde",
-    text: "Planejamento de aposentadoria, benefícios por incapacidade e demandas contra planos de saúde.",
+    title: "Previdenciário",
+    text: "Planejamento de aposentadoria, benefícios por incapacidade e revisão de benefícios.",
   },
 ];
 
@@ -55,13 +55,21 @@ const NEWS_SOURCES = [
     topic: "INSS e legislação",
     href: "https://www12.senado.leg.br/noticias/tags/INSS",
   },
-  { title: "Supremo Tribunal Federal", topic: "Jurisprudência do STF", href: "https://noticias.stf.jus.br" },
+  {
+    title: "Supremo Tribunal Federal",
+    topic: "Jurisprudência do STF",
+    href: "https://noticias.stf.jus.br",
+  },
   {
     title: "Superior Tribunal de Justiça",
     topic: "Últimas notícias do STJ",
     href: "https://www.stj.jus.br/sites/portalp/Comunicacao/Ultimas-noticias",
   },
-  { title: "Tribunal Superior do Trabalho", topic: "Direito do trabalho", href: "https://www.tst.jus.br/noticias" },
+  {
+    title: "Tribunal Superior do Trabalho",
+    topic: "Direito do trabalho",
+    href: "https://www.tst.jus.br/noticias",
+  },
   {
     title: "Notícias Agrícolas",
     topic: "Agronegócio",
@@ -106,8 +114,8 @@ function Blog() {
             <a
               href={SOCIAL.blog}
               target="_blank"
-              rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm tracking-wide text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-7 text-sm tracking-wide text-primary-foreground"
             >
               Acessar o blog completo
               <ArrowUpRight className="h-4 w-4" />
@@ -119,10 +127,7 @@ function Blog() {
           <h2 className="text-3xl text-primary">Temas que acompanhamos</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {TEMAS.map((t) => (
-              <article
-                key={t.title}
-                className="rounded-xl border border-border bg-card p-6 shadow-[var(--shadow-soft)]"
-              >
+              <article key={t.title} className="rounded-xl border border-border bg-card p-6">
                 <div className="h-px w-10 rule-gold" />
                 <h3 className="mt-4 text-xl leading-snug text-primary">{t.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t.text}</p>
@@ -139,8 +144,8 @@ function Blog() {
             </p>
             <h2 className="mt-3 text-3xl text-primary">Últimas notícias</h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Acompanhe informações recentes em portais institucionais e veículos especializados.
-              Os links abrem diretamente na fonte responsável pelo conteúdo.
+              Acompanhe informações recentes em portais institucionais e veículos especializados. Os
+              links abrem diretamente na fonte responsável pelo conteúdo.
             </p>
 
             <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
@@ -150,18 +155,24 @@ function Blog() {
                   href={source.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${source.title}: ${source.topic} (abre em nova aba)`}
                   className="group flex min-h-36 flex-col justify-between bg-card p-6 transition-colors hover:bg-secondary focus-visible:z-10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <Landmark className="h-5 w-5 shrink-0 text-gold-ink" aria-hidden="true" />
-                    <span className="text-xs text-muted-foreground">{String(index + 1).padStart(2, "0")}</span>
+                    <span aria-hidden="true" className="text-xs text-muted-foreground">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
                   </div>
                   <div className="mt-6">
-                    <p className="text-xs tracking-[0.16em] text-gold-ink uppercase">{source.topic}</p>
+                    <p className="text-xs tracking-[0.16em] text-gold-ink uppercase">
+                      {source.topic}
+                    </p>
                     <h3 className="mt-2 flex items-center justify-between gap-3 text-lg leading-snug text-primary">
                       {source.title}
-                      <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+                      <ArrowUpRight
+                        className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                        aria-hidden="true"
+                      />
                     </h3>
                   </div>
                 </a>

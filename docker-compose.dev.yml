@@ -1,0 +1,24 @@
+# Ambiente local para o formulário de contato (o Vite não executa PHP).
+#   docker compose -f docker-compose.dev.yml up -d
+#   CONTACT_API_DEV_TARGET=http://localhost:8088 npm run dev
+# E-mails enviados em desenvolvimento: http://localhost:8025 (Mailpit).
+services:
+  php:
+    image: php:8.2-apache
+    ports:
+      - "8088:80"
+    volumes:
+      - ./public/api:/var/www/site/public_html/api:ro
+      - ./dev/contato/fujii-contato.dev.config.php:/var/www/site/fujii-contato.config.php:ro
+    command: >
+      bash -c "sed -ri 's#/var/www/html#/var/www/site/public_html#g'
+      /etc/apache2/sites-available/000-default.conf && apache2-foreground"
+    depends_on:
+      - mailpit
+  mailpit:
+    image: axllent/mailpit
+    ports:
+      - "8025:8025"
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: "1"
+      MP_SMTP_AUTH_ALLOW_INSECURE: "1"

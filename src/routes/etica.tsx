@@ -29,7 +29,7 @@ const CONDUTA = [
   {
     icon: ShieldCheck,
     title: "Segredo profissional",
-    text: "Compromisso absoluto com o sigilo das informações de cada cliente. Documentos e conversas são acessados apenas pela equipe designada ao caso, com controle de acesso e descarte seguro.",
+    text: "Compromisso com o sigilo das informações de cada cliente. Documentos e conversas são acessados apenas pela equipe designada ao caso, com controle de acesso e descarte seguro.",
   },
   {
     icon: Scale,
@@ -88,10 +88,7 @@ function Etica() {
           <h2 className="text-3xl text-primary">Código de conduta interna</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {CONDUTA.map((c) => (
-              <article
-                key={c.title}
-                className="rounded-xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] sm:p-8"
-              >
+              <article key={c.title} className="rounded-xl border border-border bg-card p-6 sm:p-8">
                 <c.icon className="h-6 w-6 text-gold-ink" aria-hidden="true" />
                 <h3 className="mt-4 text-xl text-primary">{c.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
@@ -127,7 +124,7 @@ function Etica() {
               </p>
               <Link
                 to="/quem-somos"
-                className="mt-6 inline-flex rounded-full border border-gold/60 px-5 py-2 text-xs tracking-[0.14em] text-primary uppercase transition-colors hover:bg-secondary"
+                className="mt-6 inline-flex min-h-11 items-center rounded-full border border-gold/60 px-5 text-xs tracking-[0.14em] text-primary uppercase transition-colors hover:bg-secondary"
               >
                 Conhecer o escritório
               </Link>

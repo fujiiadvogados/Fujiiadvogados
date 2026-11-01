@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 
 const TITLE = "Áreas de atuação — Fujii Advocacia & Consultoria Jurídica";
 const DESCRIPTION =
-  "Seis áreas de atuação com suas subáreas: direito tributário, agronegócio, civil, consumidor, previdenciário e trabalhista.";
+  "Seis áreas de atuação com suas subáreas: direito tributário, agrário e do agronegócio, previdenciário, civil, do consumidor e do trabalho.";
 
 export const Route = createFileRoute("/areas/")({
   head: () => ({
@@ -42,38 +42,20 @@ function AreasIndex() {
               Seis áreas de atuação, cada uma com suas subáreas
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground hyphens-none">
-              Cada área reúne subáreas correlatas, com diagnóstico prévio e avaliação honesta das chances reais de êxito. Veja abaixo onde podemos ajudar.
+              Cada área reúne subáreas correlatas, com diagnóstico prévio e avaliação honesta das
+              chances reais de êxito. Veja abaixo onde podemos ajudar.
             </p>
           </div>
         </section>
 
-        <section className="py-14 sm:py-20">
+        <section aria-labelledby="lista-areas" className="py-14 sm:py-20">
           <div className="mx-auto w-full max-w-[80rem] px-[5vw] sm:px-8 xl:px-12">
+            <h2 id="lista-areas" className="sr-only">
+              Lista das áreas de atuação
+            </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {AREAS.map((area) => (
                 <AreaCard key={area.slug} area={area} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="border-t border-border bg-[image:var(--gradient-veil)] py-14 sm:py-20">
-          <div className="mx-auto w-full max-w-[80rem] px-[5vw] sm:px-8 xl:px-12">
-            <h2 className="text-2xl text-primary sm:text-3xl">Subáreas de cada área</h2>
-            <div className="mt-3 h-px w-16 rule-gold" />
-            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {AREAS.map((area) => (
-                <div
-                  key={area.slug}
-                  className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)]"
-                >
-                  <h3 className="text-lg text-primary">{area.title}</h3>
-                  <ul className="mt-3 space-y-1.5 text-sm leading-snug text-foreground/75">
-                    {area.subareas.map((s) => (
-                      <li key={s}>{s}</li>
-                    ))}
-                  </ul>
-                </div>
               ))}
             </div>
           </div>

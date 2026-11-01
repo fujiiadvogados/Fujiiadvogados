@@ -180,14 +180,81 @@ A partir daí, cada `git push` publica o site automaticamente.
 
 ---
 
+## 10.1 Ativar o envio do formulário de contato
+
+O formulário envia para `api/contato.php` (já incluído no `public_html` pelo build).
+Esse script manda o e-mail por SMTP autenticado da própria caixa da Hostinger.
+**A senha nunca vai para o repositório nem para o `public_html`.**
+
+1. Confirme que o domínio está ativo e que a caixa `atendimento@fujiiadvogados.com.br`
+   existe (item 10) e recebe e-mails.
+2. hPanel → **Avançado** → **Configuração do PHP**: use PHP **8.0 ou superior**
+   (extensões `mbstring` e `openssl` ativas — padrão na Hostinger).
+3. No **Gerenciador de Arquivos**, abra a pasta que **contém** o `public_html`
+   (ex.: `/home/uXXXXXXX/domains/fujiiadvogados.com.br/`).
+4. Crie ali o arquivo `fujii-contato.config.php` copiando o modelo
+   `deploy/fujii-contato.config.example.php` do repositório e preencha `smtp_pass`
+   com a senha da caixa. Permissão: **600**.
+5. Teste: envie o formulário do site com a palavra **TESTE** na mensagem e confira a
+   chegada na caixa de entrada (e no spam).
+
+Como saber o que aconteceu (respostas do `api/contato.php`):
+
+| Situação | Resposta | O visitante vê |
+|---|---|---|
+| Enviado (servidor SMTP aceitou) | 200 `sent` | "Mensagem enviada" |
+| Reenvio da mesma mensagem | 200 `duplicate` | "Mensagem enviada" (sem novo e-mail) |
+| Campos inválidos | 422 `invalid` | erros nos campos |
+| Muitas tentativas (5/h por IP, 40/h no total) | 429 | aviso + WhatsApp |
+| Arquivo de configuração ausente | 503 `not_configured` | erro + alternativas (e-mail, telefone, WhatsApp) |
+| Falha no SMTP (senha errada, servidor fora) | 502 `send_failed` | erro + alternativas |
+
+O log de erros do PHP registra apenas a etapa e o código SMTP (ex.:
+`contato: falha smtp etapa=auth codigo=535` = senha incorreta), nunca dados do visitante.
+
+Observação: o formulário só funciona no domínio publicado na Hostinger. Na prévia do
+Lovable (sem PHP) ele exibe a mensagem de erro com as alternativas de contato.
+
+### Por que aparece "Não foi possível enviar pelo formulário"
+
+O endpoint é **PHP** e só funciona onde há PHP: na hospedagem Hostinger e no ambiente
+local abaixo. O servidor do Vite (`npm run dev`) e a prévia do Lovable **não executam PHP**:
+antes desta correção, o Vite devolvia o próprio arquivo `contato.php` (código-fonte) e o
+formulário mostrava a falha genérica. Agora, sem PHP, a rota responde um JSON 503
+(`dev_no_php`) e o visitante vê a mensagem de indisponibilidade com WhatsApp, e-mail e telefone.
+
+### Testar o formulário localmente (PHP + servidor de e-mail de teste)
+
+```bash
+docker compose -f docker-compose.dev.yml up -d        # Apache+PHP 8.2 (8088) e Mailpit (8025)
+CONTACT_API_DEV_TARGET=http://localhost:8088 npx vite dev --port 5173
+# PowerShell: $env:CONTACT_API_DEV_TARGET="http://localhost:8088"; npx vite dev --port 5173
+```
+
+Abra http://localhost:5173/#contato, envie e veja o e-mail em http://localhost:8025.
+O arquivo `dev/contato/fujii-contato.dev.config.php` só serve para esse ambiente (sem senha real).
+
+### O que falta preencher na hospedagem (por meio seguro, nunca no chat ou no Git)
+
+No arquivo `fujii-contato.config.php`, fora do `public_html`:
+
+| Chave | Valor | Quem fornece |
+|---|---|---|
+| `smtp_pass` | senha da caixa `atendimento@fujiiadvogados.com.br` | responsável pelo hPanel |
+| `smtp_user` / `from_email` | a caixa que autentica (precisa existir) | idem |
+| `to_email` | destinatário oficial (hoje: `atendimento@fujiiadvogados.com.br`) | escritório |
+| `allowed_origins` | `https://fujiiadvogados.com.br` e `https://www.…` (ajustar se o domínio mudar) | idem |
+
+Pré-requisitos: domínio registrado e apontado para a Hostinger, SSL ativo e a caixa de e-mail criada.
+
 ## 11. Checklist final
 
 - [ ] `https://fujiiadvogados.com.br` abre com cadeado
 - [ ] `www` redireciona para o domínio principal
 - [ ] `/quem-somos`, `/etica`, `/blog` abrem ao recarregar (`.htaccess` ok)
 - [ ] Botão do WhatsApp abre a conversa correta
-- [ ] Formulário envia para `atendimento@fujiiadvogados.com.br`
-- [ ] Mapa mostra Rua 4, n° 53 — Altos do Cerrado, Cuiabá — MT
+- [ ] Formulário envia para `atendimento@fujiiadvogados.com.br` (item 10.1) e o e-mail de TESTE chega na caixa de entrada
+- [ ] Mapa e botões "Ver no mapa"/"Como chegar" apontam para Rua Quatro, n° 53 — Altos do Cerrado, Cuiabá — MT (coordenadas -15.6048971, -55.9929694)
 - [ ] `sitemap.xml` e `robots.txt` acessíveis
 - [ ] Testado em celular, tablet, notebook e monitor grande
 

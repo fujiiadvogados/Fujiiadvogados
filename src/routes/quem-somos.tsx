@@ -2,14 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/site-header";
+import { BrandMark } from "@/components/brand-mark";
 import { SiteFooter, WhatsappFab } from "@/components/site-footer";
 import { WhatsappIcon } from "@/components/brand-icons";
 import { SITE_URL, WHATSAPP_LINK } from "@/lib/site";
-import emblem from "@/assets/emblem.png";
+import { AREAS } from "@/lib/areas";
 
 const TITLE = "Quem Somos — Fujii Advocacia & Consultoria Jurídica";
 const DESCRIPTION =
-  "Missão, visão, valores e propósito da Fujii Advocacia & Consultoria Jurídica: trabalho técnico, linguagem clara, sigilo absoluto e proximidade humana em Cuiabá (MT) e em todo o Brasil.";
+  "Missão, visão, valores e propósito da Fujii Advocacia & Consultoria Jurídica: trabalho técnico, linguagem clara, sigilo profissional e proximidade humana em Cuiabá (MT) e em todo o Brasil.";
 
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
@@ -38,7 +39,7 @@ const PILARES = [
   },
   {
     title: "Valores",
-    text: "Transparência em cada etapa, excelência técnica como método, sigilo absoluto sobre o que nos é confiado e coerência entre o que se promete e o que se entrega.",
+    text: "Transparência em cada etapa, rigor técnico como método, sigilo profissional sobre o que nos é confiado e coerência entre o que se promete e o que se entrega.",
   },
   {
     title: "Propósito",
@@ -47,7 +48,7 @@ const PILARES = [
 ];
 
 const NUMEROS = [
-  { label: "Áreas de atuação", value: "8" },
+  { label: "Áreas de atuação", value: String(AREAS.length) },
   { label: "Atendimento", value: "Presencial e remoto" },
   { label: "Abrangência", value: "Todo o Brasil" },
 ];
@@ -78,13 +79,9 @@ function QuemSomos() {
 
         <section className="mx-auto w-full max-w-[80rem] px-[5vw] py-16 sm:px-8 sm:py-20 xl:px-12">
           <div className="grid gap-6 sm:grid-cols-2 sm:gap-8 xl:grid-cols-4">
-            {PILARES.map((p, i) => (
-              <article
-                key={p.title}
-                style={{ animationDelay: `${i * 90}ms` }}
-                className="animate-fade-in rounded-xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)] motion-reduce:animate-none sm:p-8"
-              >
-                <div className="h-px w-10 rule-gold transition-[width] duration-500 hover:w-20" />
+            {PILARES.map((p) => (
+              <article key={p.title} className="rounded-xl border border-border bg-card p-6 sm:p-8">
+                <div className="h-px w-10 rule-gold" />
                 <h2 className="mt-4 text-2xl text-primary">{p.title}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
               </article>
@@ -94,15 +91,7 @@ function QuemSomos() {
 
         <section className="border-y border-border bg-[image:var(--gradient-veil)] py-16 sm:py-20">
           <div className="mx-auto grid w-full max-w-[80rem] items-center gap-10 px-[5vw] sm:px-8 md:grid-cols-2 xl:px-12">
-            <img
-              src={emblem}
-              alt=""
-              aria-hidden="true"
-              width={225}
-              height={270}
-              loading="lazy"
-              className="mx-auto h-auto w-full max-w-[16rem] object-contain drop-shadow-[0_18px_40px_rgba(15,30,61,0.18)]"
-            />
+            <BrandMark className="mx-auto h-auto w-full max-w-[11rem]" />
             <div>
               <p className="text-xs tracking-[0.28em] text-muted-foreground uppercase">
                 Como trabalhamos
@@ -158,10 +147,7 @@ function QuemSomos() {
                 text: "Aperfeiçoamento contínuo nas relações de trabalho urbanas e rurais, na via preventiva e contenciosa.",
               },
             ].map((item) => (
-              <li
-                key={item.title}
-                className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)]"
-              >
+              <li key={item.title} className="rounded-2xl border border-border bg-card p-6">
                 <div className="h-px w-10 rule-gold" />
                 <h3 className="mt-4 text-lg leading-snug text-primary">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
@@ -180,15 +166,15 @@ function QuemSomos() {
             <a
               href={WHATSAPP_LINK}
               target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm tracking-wide text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-7 text-sm tracking-wide text-primary-foreground"
             >
               <WhatsappIcon className="h-4 w-4" />
               Falar com um advogado
             </a>
             <Link
               to="/etica"
-              className="rounded-full border border-border px-7 py-3 text-sm tracking-wide text-primary transition-colors hover:bg-secondary"
+              className="inline-flex min-h-12 items-center rounded-full border border-border px-7 text-sm tracking-wide text-primary transition-colors hover:bg-secondary"
             >
               Ética e valores
             </Link>

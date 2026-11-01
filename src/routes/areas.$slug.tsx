@@ -17,7 +17,10 @@ export const Route = createFileRoute("/areas/$slug")({
     const area = getArea(params.slug);
     if (!area) {
       return {
-        meta: [{ title: "Área não encontrada — Fujii Advocacia & Consultoria Jurídica" }, { name: "robots", content: "noindex" }],
+        meta: [
+          { title: "Área não encontrada — Fujii Advocacia & Consultoria Jurídica" },
+          { name: "robots", content: "noindex" },
+        ],
       };
     }
     const title = `${area.commercial} — ${area.title} | Fujii Advocacia & Consultoria Jurídica`;
@@ -75,7 +78,10 @@ function AreaDetail() {
           <div className="relative mx-auto grid w-full max-w-[80rem] items-center gap-10 px-[5vw] py-12 sm:px-8 sm:py-16 lg:grid-cols-[1.1fr_0.9fr] xl:px-12">
             <div>
               <nav aria-label="Trilha de navegação" className="text-xs text-muted-foreground">
-                <Link to="/areas" className="tracking-[0.16em] uppercase hover:text-gold-ink">
+                <Link
+                  to="/areas"
+                  className="inline-flex min-h-11 items-center tracking-[0.16em] uppercase hover:text-gold-ink"
+                >
                   Áreas de atuação
                 </Link>
               </nav>
@@ -93,8 +99,8 @@ function AreaDetail() {
                 <a
                   href={areaLink(area.title)}
                   target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm tracking-wide text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm tracking-wide text-primary-foreground"
                 >
                   <WhatsappIcon className="h-4 w-4" />
                   Falar sobre o meu caso
@@ -102,7 +108,7 @@ function AreaDetail() {
                 <Link
                   to="/"
                   hash="contato"
-                  className="rounded-full border border-border px-6 py-3 text-sm tracking-wide text-primary transition-colors hover:bg-secondary"
+                  className="inline-flex min-h-12 items-center rounded-full border border-border px-6 text-sm tracking-wide text-primary transition-colors hover:bg-secondary"
                 >
                   Enviar mensagem
                 </Link>
@@ -114,20 +120,22 @@ function AreaDetail() {
               alt={area.alt}
               width={1200}
               height={800}
-              className="aspect-[4/3] w-full rounded-3xl border border-border object-cover shadow-[var(--shadow-lift)]"
+              className="aspect-[4/3] w-full rounded-3xl border border-border object-cover"
             />
           </div>
         </section>
 
         <section className="mx-auto w-full max-w-[80rem] px-[5vw] py-14 sm:px-8 sm:py-20 xl:px-12">
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-soft)]">
-              <p className="text-xs tracking-[0.22em] text-muted-foreground uppercase">O problema</p>
+            <div className="rounded-2xl border border-border bg-card p-7">
+              <p className="text-xs tracking-[0.22em] text-muted-foreground uppercase">
+                O problema
+              </p>
               <p className="mt-4 text-base leading-relaxed text-foreground/80 hyphens-none">
                 {area.problem}
               </p>
             </div>
-            <div className="rounded-2xl border border-gold/40 bg-card p-7 shadow-[var(--shadow-soft)]">
+            <div className="rounded-2xl border border-gold/40 bg-card p-7">
               <p className="text-xs tracking-[0.22em] text-gold-ink uppercase">Como atuamos</p>
               <p className="mt-4 text-base leading-relaxed text-foreground/80 hyphens-none">
                 {area.solution}
@@ -136,7 +144,10 @@ function AreaDetail() {
           </div>
         </section>
 
-        <section className="border-y border-border bg-[image:var(--gradient-veil)] py-14 sm:py-20">
+        <section
+          id="subareas"
+          className="scroll-mt-24 border-y border-border bg-[image:var(--gradient-veil)] py-14 sm:py-20"
+        >
           <div className="mx-auto w-full max-w-[80rem] px-[5vw] sm:px-8 xl:px-12">
             <h2 className="text-2xl text-primary sm:text-3xl">Subáreas de atuação</h2>
             <div className="mt-3 h-px w-16 rule-gold" />
@@ -160,10 +171,7 @@ function AreaDetail() {
             <div className="mt-3 h-px w-16 rule-gold" />
             <div className="mt-8 grid gap-4 lg:grid-cols-2">
               {area.faq.map((f) => (
-                <details
-                  key={f.q}
-                  className="group rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)]"
-                >
+                <details key={f.q} className="group rounded-2xl border border-border bg-card p-6">
                   <summary className="cursor-pointer list-none text-base text-primary marker:hidden">
                     {f.q}
                   </summary>
@@ -186,7 +194,7 @@ function AreaDetail() {
                     key={r.slug}
                     to="/areas/$slug"
                     params={{ slug: r.slug }}
-                    className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-gold/50"
+                    className="card-lift group rounded-2xl border border-border bg-card p-6"
                   >
                     <p className="text-[0.65rem] tracking-[0.2em] text-gold-ink uppercase">
                       {r.title}

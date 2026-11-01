@@ -1,6 +1,16 @@
 import { MapPin, Navigation } from "lucide-react";
 
-import { ADDRESS_LINES, MAPS_EMBED_URL, MAPS_LINK, OFFICE_HOURS } from "@/lib/site";
+import {
+  ADDRESS_LINES,
+  EXTERNAL_LINK,
+  MAPS_DIRECTIONS_LINK,
+  MAPS_EMBED_URL,
+  MAPS_LINK,
+  OFFICE_HOURS,
+} from "@/lib/site";
+
+const buttonClass =
+  "inline-flex min-h-11 items-center gap-2 rounded-full border border-gold/60 px-5 text-xs tracking-[0.14em] text-primary uppercase transition-colors hover:bg-secondary";
 
 export function LocationMap() {
   return (
@@ -18,7 +28,7 @@ export function LocationMap() {
           </p>
 
           <div className="mt-6 flex gap-3">
-            <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold-ink" />
+            <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold-ink" aria-hidden="true" />
             <address className="text-sm leading-relaxed text-muted-foreground not-italic">
               {ADDRESS_LINES.map((line) => (
                 <span key={line} className="block">
@@ -30,22 +40,35 @@ export function LocationMap() {
 
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{OFFICE_HOURS}</p>
 
-          <a
-            href={MAPS_LINK}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/60 px-5 py-2.5 text-xs tracking-[0.14em] text-primary uppercase transition-colors hover:bg-secondary"
-          >
-            <Navigation className="h-4 w-4 text-gold-ink" />
-            Traçar rota
-          </a>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href={MAPS_LINK}
+              {...EXTERNAL_LINK}
+              aria-label="Ver no mapa (Google Maps, abre em nova aba)"
+              className={buttonClass}
+            >
+              <MapPin className="h-4 w-4 text-gold-ink" aria-hidden="true" />
+              Ver no mapa
+            </a>
+            <a
+              href={MAPS_DIRECTIONS_LINK}
+              {...EXTERNAL_LINK}
+              aria-label="Como chegar (rota no Google Maps, abre em nova aba)"
+              className={buttonClass}
+            >
+              <Navigation className="h-4 w-4 text-gold-ink" aria-hidden="true" />
+              Como chegar
+            </a>
+          </div>
         </div>
 
-        <div className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-lift)]">
+        <div className="min-w-0 overflow-hidden rounded-3xl border border-border">
           <iframe
-            title="Mapa da localização do escritório Fujii Advocacia & Consultoria Jurídica"
+            title={`Mapa do escritório: ${ADDRESS_LINES.join(", ")}`}
             src={MAPS_EMBED_URL}
             loading="lazy"
+            allow="fullscreen"
+            allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
             className="h-[20rem] w-full border-0 sm:h-[24rem] lg:h-full lg:min-h-[22rem]"
           />

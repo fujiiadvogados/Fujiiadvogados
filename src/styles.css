@@ -63,6 +63,7 @@
   --color-gold-soft: var(--gold-soft);
   --color-gold-ink: var(--gold-ink);
   --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-strong: var(--whatsapp-strong);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --shadow-soft: var(--shadow-soft);
@@ -95,6 +96,8 @@
   --gold-soft: oklch(0.93 0.05 88);
   --gold-ink: oklch(0.48 0.1 75);
   --whatsapp: oklch(0.62 0.16 150);
+  /* Verde mais escuro para fundos com texto branco (contraste ≥ 4,5:1) */
+  --whatsapp-strong: oklch(0.5 0.13 150);
   --gradient-gold: linear-gradient(
     100deg,
     oklch(0.52 0.1 72),
@@ -153,6 +156,7 @@
   --gold-soft: oklch(0.4 0.06 85);
   --gold-ink: oklch(0.84 0.11 85);
   --whatsapp: oklch(0.68 0.16 150);
+  --whatsapp-strong: oklch(0.5 0.13 150);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -190,10 +194,9 @@
   }
 }
 
+/* Dourado sóbrio e sólido: legível sobre off-white (contraste AA), sem gradiente chamativo */
 @utility text-gilded {
-  background-image: var(--gradient-gold);
-  background-clip: text;
-  color: transparent;
+  color: var(--gold-ink);
 }
 
 @utility rule-gold {
@@ -201,6 +204,21 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+
   ::selection {
     background: var(--gold-soft);
     color: var(--foreground);
@@ -225,5 +243,99 @@
     hyphens: none;
     -webkit-hyphens: none;
     overflow-wrap: break-word;
+  }
+}
+
+/*
+ * Interações discretas (sem animações contínuas; todo o conteúdo visível sem JS/hover).
+ * Fora de @layer de propósito: precisam prevalecer sobre utilitários (ex.: border-border).
+ */
+/* Cards clicáveis: leve elevação, borda dourada e sombra suave — sem alterar o layout */
+.card-lift {
+  transition:
+    transform 180ms ease-out,
+    box-shadow 180ms ease-out,
+    border-color 180ms ease-out;
+}
+.card-lift:hover,
+.card-lift:focus-within {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--gold) 65%, transparent);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Botão de WhatsApp: reação no ícone (a área de toque do link não muda) */
+.wa-react svg {
+  transition: transform 180ms ease-out;
+}
+.wa-react:hover svg,
+.wa-react:focus-visible svg {
+  transform: rotate(-8deg) scale(1.06);
+}
+.wa-react:active svg {
+  transform: scale(0.92);
+}
+
+/* Pulso inicial do botão flutuante: 2 execuções e para (anel decorativo, sem capturar cliques) */
+.wa-pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 color-mix(in oklab, var(--whatsapp) 55%, transparent);
+  animation: wa-pulse 1.6s ease-out 1.2s 2 both;
+}
+
+/*
+ * Inclinação 3D da logo: só o elemento interno se move (o link/contêiner não muda).
+ * Em repouso não há transform algum, preservando a nitidez da imagem.
+ * data-tilt="active": segue o ponteiro; "returning": volta suavemente a 0°.
+ */
+.tilt-inner {
+  display: block;
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.tilt-inner[data-tilt] {
+  transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+}
+.tilt-inner[data-tilt="active"] {
+  transition-duration: 120ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-lift:hover,
+  .card-lift:focus-within {
+    transform: none;
+  }
+  .wa-react:hover svg,
+  .wa-react:focus-visible svg,
+  .wa-react:active svg {
+    transform: none;
+  }
+  .wa-pulse::after {
+    animation: none;
+  }
+  .tilt-inner,
+  .tilt-inner[data-tilt] {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Toque: sem "hover preso" após o toque; o conteúdo não depende de hover */
+@media (hover: none) {
+  .card-lift:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@keyframes wa-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--whatsapp) 55%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 10px color-mix(in oklab, var(--whatsapp) 0%, transparent);
   }
 }

@@ -2,11 +2,11 @@
   {
     "slug": "tributario",
     "title": "Direito Tributário",
-    "commercial": "Redução e Revisão da Carga Tributária",
-    "promise": "Menos imposto pago a mais, mais previsibilidade no caixa.",
-    "description": "Assessoria tributária e defesa em execuções fiscais para empresas, produtores rurais e pessoas físicas: planejamento, recuperação de créditos e atuação administrativa e judicial.",
+    "commercial": "Planejamento, consultoria e defesa fiscal",
+    "promise": "Orientação tributária para decisões fundamentadas e defesa técnica perante o Fisco.",
+    "description": "Atuação consultiva e contenciosa em matéria tributária para empresas, produtores rurais e pessoas físicas: planejamento, consultoria, defesa em autuações e execuções fiscais, recuperação de créditos e regularização de débitos.",
     "problem": "Autuações inesperadas, tributos recolhidos indevidamente e insegurança sobre o enquadramento fiscal comprometem o resultado do negócio e a tomada de decisão.",
-    "solution": "Diagnóstico tributário do último quinquênio, identificação de créditos recuperáveis, revisão do enquadramento e defesa técnica em processos administrativos e judiciais, com relatório objetivo de riscos e oportunidades.",
+    "solution": "Análise da documentação fiscal e contábil, identificação de riscos e de eventuais créditos, revisão do enquadramento e defesa técnica em processos administrativos e judiciais, com relatório objetivo das alternativas.",
     "faq": [
       {
         "q": "É possível recuperar tributos pagos a mais?",
@@ -18,28 +18,26 @@
       }
     ],
     "subareas": [
-      "Planejamento e Consultoria Tributária",
-      "Contencioso Administrativo e Judicial",
-      "Recuperação de Créditos e Compensação",
-      "Execuções Fiscais e Exceção de Pré-Executividade",
-      "Revisão da Dívida Ativa e Levantamento de Penhoras",
-      "Parcelamentos e Transação Tributária",
-      "Due Diligence Tributária",
-      "Tributação Rural (ITR e Funrural)"
+      "Planejamento tributário",
+      "Consultoria tributária",
+      "Defesa em autuações fiscais",
+      "Execuções fiscais",
+      "Recuperação de créditos tributários",
+      "Regularização e negociação de débitos fiscais"
     ]
   },
   {
     "slug": "agronegocio",
-    "title": "Direito do Agronegócio",
-    "commercial": "Segurança Jurídica do Campo ao Contrato",
-    "promise": "Contratos, terra e sucessão sob controle.",
-    "description": "Segurança jurídica para o produtor rural e o agronegócio: contratos, crédito rural, renegociação de dívidas, garantias, safra e propriedade.",
-    "problem": "Contratos agrários genéricos, áreas sem regularização e ausência de planejamento sucessório expõem o patrimônio rural a litígios e perdas.",
-    "solution": "Elaboração e revisão de contratos agrários, due diligence de imóveis rurais, estruturação de garantias e planejamento patrimonial e sucessório da atividade.",
+    "title": "Direito Agrário e do Agronegócio",
+    "commercial": "Contratos, imóveis e crédito rural",
+    "promise": "Assessoria jurídica para a atividade rural, do contrato à regularização do imóvel.",
+    "description": "Assessoria ao produtor rural e às empresas do agronegócio em contratos agrários, arrendamento e parceria, regularização de imóveis rurais, questões possessórias e fundiárias, crédito rural e renegociação de dívidas.",
+    "problem": "Contratos agrários genéricos, áreas sem regularização e dívidas rurais sem estratégia de negociação expõem o patrimônio e a atividade a litígios e perdas.",
+    "solution": "Elaboração e revisão de contratos agrários, análise documental de imóveis rurais, orientação em operações de crédito rural e condução de renegociações, na via extrajudicial ou judicial.",
     "faq": [
       {
         "q": "Contrato de arrendamento pode ser feito em modelo padrão?",
-        "a": "Modelos genéricos costumam ignorar particularidades de safra, benfeitorias e rescisão. A redação personalizada reduz significativamente o risco de conflito."
+        "a": "Modelos genéricos costumam ignorar particularidades de safra, benfeitorias e rescisão. A redação personalizada reduz o risco de conflito."
       },
       {
         "q": "Atendem produtores fora de Mato Grosso?",
@@ -47,54 +45,76 @@
       }
     ],
     "subareas": [
-      "Contratos Agrários (arrendamento, parceria, CPR, barter)",
-      "Crédito Rural (custeio, investimento e comercialização)",
-      "Endividamento Rural e Renegociação",
-      "Alongamento e Prorrogação de Dívidas",
-      "Garantias Rurais (penhor, hipoteca, alienação fiduciária)",
-      "Frustração de Safra, Proagro e Seguro Rural",
-      "Direito Ambiental Rural (CAR, Reserva Legal e APP)",
-      "Posse, Propriedade e Usucapião Rural",
-      "Sucessão e Holding Rural"
+      "Contratos agrários",
+      "Arrendamento e parceria rural",
+      "Regularização de imóveis rurais",
+      "Questões possessórias e fundiárias",
+      "Crédito e financiamento rural",
+      "Renegociação de dívidas rurais"
+    ]
+  },
+  {
+    "slug": "previdenciario",
+    "title": "Direito Previdenciário",
+    "commercial": "Aposentadorias e benefícios do INSS",
+    "promise": "Orientação para requerer, revisar e planejar benefícios previdenciários.",
+    "description": "Assessoria para obtenção, revisão e planejamento de benefícios previdenciários e assistenciais, na via administrativa e judicial.",
+    "problem": "Pedidos indeferidos, tempo de contribuição não reconhecido e benefícios calculados de forma incorreta são situações frequentes que merecem análise técnica.",
+    "solution": "Análise do CNIS e da documentação, simulação de cenários de aposentadoria, instrução do requerimento, recursos administrativos e ações judiciais quando cabíveis.",
+    "faq": [
+      {
+        "q": "Meu pedido foi negado. Ainda é possível rever?",
+        "a": "O indeferimento pode ser questionado por recurso administrativo ou ação judicial. A viabilidade depende da documentação e do fundamento da negativa."
+      },
+      {
+        "q": "O que é planejamento previdenciário?",
+        "a": "É o estudo que compara cenários de contribuição e regras de transição para indicar o momento e o formato de aposentadoria mais adequados ao caso."
+      }
+    ],
+    "subareas": [
+      "Aposentadorias",
+      "Benefícios por incapacidade",
+      "Pensão por morte",
+      "Benefício assistencial — BPC/LOAS",
+      "Planejamento previdenciário",
+      "Revisão de benefícios"
     ]
   },
   {
     "slug": "civil",
     "title": "Direito Civil",
-    "commercial": "Contratos, Cobranças e Indenizações com Segurança",
-    "promise": "Estratégia para resolver o conflito e proteger o seu patrimônio.",
-    "description": "Atuação consultiva e contenciosa em contratos, responsabilidade civil, família, sucessões, imóveis, cobrança e execução, para pessoas e empresas.",
+    "commercial": "Contratos, família, imóveis e cobranças",
+    "promise": "Atuação consultiva e contenciosa para prevenir e resolver conflitos patrimoniais e familiares.",
+    "description": "Atuação consultiva e contenciosa em contratos e obrigações, responsabilidade civil, família, sucessões e inventários, direito imobiliário, cobranças e execuções, para pessoas e empresas.",
     "problem": "Contratos mal redigidos, dívidas não pagas e conflitos patrimoniais costumam se agravar com o tempo, e prazos perdidos podem comprometer direitos.",
-    "solution": "Leitura do caso e dos documentos, definição da via mais segura (acordo ou ação), medidas de urgência quando cabíveis e, na cobrança, pesquisa patrimonial para dar efetividade ao crédito.",
+    "solution": "Leitura do caso e dos documentos, definição da via mais adequada (acordo ou ação), medidas de urgência quando cabíveis e, na cobrança, pesquisa patrimonial para dar efetividade ao crédito.",
     "faq": [
       {
         "q": "Vale tentar um acordo antes de entrar na Justiça?",
-        "a": "Em muitos casos sim: a composição costuma ser mais rápida e barata. A estratégia é definida após a análise dos documentos e do risco de cada caminho."
+        "a": "Em muitos casos, sim: a composição costuma ser mais rápida e menos custosa. A estratégia é definida após a análise dos documentos e do risco de cada caminho."
       },
       {
         "q": "Como funciona a cobrança de uma dívida?",
-        "a": "Analisamos o título, tentamos a solução extrajudicial e, se necessário, ajuizamos a ação ou execução, buscando bens do devedor para satisfazer o crédito. Não há promessa de resultado."
+        "a": "Analisamos o título, buscamos a solução extrajudicial e, se necessário, ajuizamos a ação ou execução, com pesquisa de bens do devedor. Não há promessa de resultado."
       }
     ],
     "subareas": [
-      "Contratos e Obrigações",
-      "Responsabilidade Civil e Indenizações",
-      "Direito de Família e Sucessões",
-      "Direito Imobiliário e Posse",
-      "Cobrança e Execução de Títulos",
-      "Direito Bancário",
-      "Direito Empresarial e Societário",
-      "Recursos e Cumprimento de Sentença"
+      "Contratos e obrigações",
+      "Responsabilidade civil e indenizações",
+      "Direito de Família",
+      "Sucessões e inventários",
+      "Direito Imobiliário",
+      "Cobranças e execuções"
     ]
   },
   {
     "slug": "consumidor",
     "title": "Direito do Consumidor",
-    "commercial": "Defesa do Consumidor em Cobranças e Contratos",
-    "promise": "Cobrança indevida contestada e nome limpo de volta.",
-    "description": "Defesa do consumidor em cobranças, bancos, planos de saúde, direito médico, companhias aéreas e concessionárias de serviços essenciais.",
-    "problem": "Negativações indevidas, cobranças que não se reconhecem e contratos com cláusulas abusivas afetam crédito, rotina e tranquilidade.",
-    "solution": "Notificação e contestação das cobranças, pedido de exclusão de restrições, revisão contratual e pleito de reparação quando houver dano comprovado.",
+    "commercial": "Relações de consumo, cobranças e contratos",
+    "promise": "Orientação e atuação em conflitos com fornecedores, bancos e prestadores de serviços.",
+    "description": "Atuação em relações de consumo: cobranças e negativações indevidas, contratos bancários e de financiamento, problemas com produtos e serviços e demandas envolvendo serviços essenciais.",
+    "problem": "Negativações indevidas, cobranças que não se reconhecem e contratos com cláusulas abusivas afetam o crédito, a rotina e a tranquilidade.",
+    "solution": "Análise dos documentos, notificação e contestação das cobranças, pedido de exclusão de restrições, revisão contratual e pleito de reparação quando houver dano comprovado.",
     "faq": [
       {
         "q": "Preciso reclamar na empresa antes?",
@@ -106,53 +126,22 @@
       }
     ],
     "subareas": [
-      "Cobranças Indevidas e Negativação",
-      "Contratos Bancários e de Crédito",
-      "Planos de Saúde: negativas e reajustes",
-      "Erro Médico e Direito da Saúde",
-      "Medicamentos e Tratamentos pelo SUS",
-      "Companhias Aéreas",
-      "Concessionárias de Água, Energia e Telecomunicações",
-      "Vícios de Produtos e Serviços"
-    ]
-  },
-  {
-    "slug": "previdenciario",
-    "title": "Direito Previdenciário",
-    "commercial": "Aposentadoria e Benefícios do INSS",
-    "promise": "O benefício correto, no melhor momento e pelo maior valor devido.",
-    "description": "Assessoria completa para obtenção, revisão e planejamento de benefícios previdenciários, na via administrativa e judicial.",
-    "problem": "Pedidos indeferidos, tempo de contribuição não reconhecido e aposentadorias concedidas com valor abaixo do devido são situações frequentes e reversíveis.",
-    "solution": "Análise do CNIS, simulação de cenários de aposentadoria, instrução correta do requerimento, recursos administrativos e ações judiciais quando necessário.",
-    "faq": [
-      {
-        "q": "Meu pedido foi negado. Ainda tenho chance?",
-        "a": "O indeferimento pode ser revisto por recurso administrativo ou ação judicial. A chance real depende da documentação e do fundamento da negativa."
-      },
-      {
-        "q": "O que é planejamento previdenciário?",
-        "a": "É o estudo que compara cenários de contribuição e regras de transição para indicar o momento e o formato de aposentadoria mais vantajosos."
-      }
-    ],
-    "subareas": [
-      "Aposentadorias (idade, tempo, especial e PcD)",
-      "Benefício por Incapacidade",
-      "BPC/LOAS",
-      "Pensão por Morte e Auxílio-Reclusão",
-      "Revisão de Benefícios",
-      "Planejamento Previdenciário e Análise de CNIS",
-      "Salário-Maternidade e Auxílio-Acidente",
-      "Servidores Públicos (RPPS)"
+      "Relações de consumo",
+      "Cobranças indevidas",
+      "Negativação indevida",
+      "Contratos bancários e de financiamento",
+      "Problemas com produtos e serviços",
+      "Demandas envolvendo serviços essenciais"
     ]
   },
   {
     "slug": "trabalhista",
     "title": "Direito do Trabalho",
-    "commercial": "Relações de Trabalho com Segurança Jurídica",
-    "promise": "Prevenção de passivos e defesa técnica em reclamações.",
-    "description": "Atuação preventiva e contenciosa nas relações de trabalho, para empregados, empresas e produtores rurais.",
-    "problem": "Contratos mal formalizados, jornadas sem controle e rescisões conduzidas sem critério geram passivos trabalhistas relevantes e disputas evitáveis.",
-    "solution": "Revisão de contratos e rotinas, adequação de jornada e verbas, condução de acordos e defesa em reclamações trabalhistas com estratégia definida desde a primeira audiência.",
+    "commercial": "Consultoria e contencioso trabalhista",
+    "promise": "Atuação preventiva e contenciosa nas relações de trabalho, para empregados e empregadores.",
+    "description": "Atuação preventiva e contenciosa nas relações de trabalho, para empregados, empresas e produtores rurais, observadas as regras de conflito de interesses.",
+    "problem": "Contratos mal formalizados, jornadas sem controle e rescisões conduzidas sem critério geram passivos trabalhistas e disputas evitáveis.",
+    "solution": "Revisão de contratos e rotinas, orientação sobre jornada e verbas, condução de acordos e atuação em reclamações trabalhistas com estratégia definida desde o início.",
     "faq": [
       {
         "q": "O escritório atende empregados e empresas?",
@@ -164,14 +153,12 @@
       }
     ],
     "subareas": [
-      "Reclamações Trabalhistas",
-      "Verbas Rescisórias e Horas Extras",
-      "Insalubridade e Periculosidade",
-      "Reconhecimento de Vínculo",
-      "Acidente de Trabalho e Doença Ocupacional",
-      "Assédio e Danos Morais",
-      "Execução Trabalhista e Recursos",
-      "Defesa e Consultoria Empresarial"
+      "Consultoria trabalhista",
+      "Reclamações e defesas trabalhistas",
+      "Verbas rescisórias",
+      "Jornada e horas extras",
+      "Assédio e discriminação no trabalho",
+      "Acidentes de trabalho e doenças ocupacionais"
     ]
   }
 ]

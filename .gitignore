@@ -33,3 +33,7 @@ tsconfig.tsbuildinfo
 *.njsproj
 *.sln
 *.sw?
+
+# Configuração real do formulário (contém senha SMTP) — nunca versionar
+fujii-contato.config.php
+fujii-contato-data/
